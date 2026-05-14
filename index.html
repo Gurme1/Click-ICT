@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- ═══ PRIMARY SEO ═══ -->
+    <title>ClickICT - Barnoota Teeknoloojii Afaan Oromootiin | Computer, Bilbila, AI</title>
+    <meta name="description" content="ClickICT - Kompitara, Bilbila, Teeknoloojii fi AI Afaan Oromootiin baradhaa. Technology education in Oromo language. Free computer and phone tutorials.">
+    <meta name="keywords" content="ClickICT, Afaan Oromoo, kompitara, bilbila, teeknoloojii, AI, barnoota, technology education, Oromo, Ethiopia, computer tutorial">
+    <meta name="author" content="Gurmessa Milki">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Oromo">
+    <link rel="canonical" href="https://clickict.com/">
+
+    <!-- ═══ OPEN GRAPH (Facebook, WhatsApp, Telegram sharing) ═══ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clickict.com/">
+    <meta property="og:title" content="ClickICT - Barnoota Teeknoloojii Afaan Oromootiin">
+    <meta property="og:description" content="Kompitara, Bilbila, Teeknoloojii fi AI Afaan Oromootiin baradhaa. Free technology education in Oromo language.">
+    <meta property="og:image" content="https://clickict.com/img/lo.jpg">
+    <meta property="og:site_name" content="ClickICT">
+    <meta property="og:locale" content="om_ET">
+
+    <!-- ═══ TWITTER CARD ═══ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClickICT - Barnoota Teeknoloojii Afaan Oromootiin">
+    <meta name="twitter:description" content="Kompitara, Bilbila, Teeknoloojii fi AI Afaan Oromootiin baradhaa.">
+    <meta name="twitter:image" content="https://clickict.com/img/lo.jpg">
+
+    <!-- ═══ STRUCTURED DATA (Google Rich Results) ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "ClickICT",
+      "url": "https://clickict.com",
+      "logo": "https://clickict.com/img/lo.jpg",
+      "description": "Technology education platform in Afaan Oromoo language covering computers, phones, AI and technology.",
+      "founder": { "@type": "Person", "name": "Gurmessa Milki" },
+      "sameAs": [
+        "https://facebook.com/OroComputerSchool",
+        "https://youtube.com/@orocomputer",
+        "https://t.me/Orocomputer",
+        "https://tiktok.com/@orocomputer"
+      ]
+    }
+    </script>
+
+    <!-- ═══ PERFORMANCE ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ═══ FAVICON ═══ -->
+    <link rel="icon" type="image/jpeg" href="img/lo.jpg">
+    <link rel="apple-touch-icon" href="img/lo.jpg">
+
+    <!-- ═══ THEME COLOR (mobile browser bar) ═══ -->
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="system/kompitara.html">Kompitara</a></li>
+                    <li><a href="system/bilbila.html">Bilbila</a></li>
+                    <li><a href="system/teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="system/ai.html">Barnoota AI</a></li>
+                    <li><a href="system/videos.html">📹 Videos</a></li>
+                    <li><a href="system/gallery.html">🖼️ Gallery</a></li>
+                    <li><a href="system/book-seller.html" style="color:#f59e0b; font-weight:600;">📚 Book Seller</a></li>
+                    <li><a href="system/social-media.html">Social Media</a></li>
+                    <li><a href="system/about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="system/user-login.html" style="color: #059669;">Login</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om">🇪🇹 Afaan Oromoo</option>
+                            <option value="am">🇪🇹 አማርኛ</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="ar">🇸🇦 العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">🕐</span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="index.html" class="active">🏠 Home</a></li>
+            <li><a href="system/kompitara.html">💻 Kompitara</a></li>
+            <li><a href="system/bilbila.html">📱 Bilbila</a></li>
+            <li><a href="system/teeknoloojii.html">🌐 Teeknoloojii</a></li>
+            <li><a href="system/ai.html">🤖 Barnoota AI</a></li>
+            <li><a href="system/videos.html">📹 Videos</a></li>
+            <li><a href="system/gallery.html">🖼️ Gallery</a></li>
+            <li><a href="system/book-seller.html">📚 Book Seller</a></li>
+            <li><a href="system/social-media.html">📲 Social Media</a></li>
+            <li><a href="system/about-developer.html">👨‍💻 About Us</a></li>
+            <li><a href="system/user-login.html">🔐 Login</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+
+        <!-- ── Admin Posts Ticker (scrolling banner) ── -->
+        <div id="posts-ticker-bar" style="display:none; background:#1e293b; padding:10px 0; overflow:hidden; position:relative; border-bottom:3px solid #2563eb;">
+            <div style="display:flex; align-items:center; gap:0;">
+                <div style="background:#2563eb; color:white; padding:8px 18px; font-weight:700; font-size:0.85rem; white-space:nowrap; flex-shrink:0; z-index:2;">
+                    📢 HAARAA
+                </div>
+                <div style="overflow:hidden; flex:1;">
+                    <div id="posts-ticker-track" style="display:flex; gap:0; white-space:nowrap; animation:tickerScroll 30s linear infinite;">
+                        <!-- Ticker items injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Pinned Posts Section ── -->
+        <section id="pinned-posts-section" class="pinned-posts" style="display:none;">
+            <div class="container">
+                <h2 style="text-align:center; color:#1e293b; margin-bottom:2rem; font-size:1.6rem; font-weight:800;">📌 Barreeffamoota Filatamoo</h2>
+                <div id="pinned-posts-container" class="posts-grid">
+                    <!-- Pinned posts loaded by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Admin Posts Section (replaces static placeholder cards) ── -->
+        <section class="recent-posts" id="admin-posts-section">
+            <div class="container">
+                <h2 id="recent-posts-heading">Barreeffamoota Haaraa</h2>
+                <div class="posts-grid" id="main-posts-grid">
+                    <!-- Posts loaded dynamically by JS -->
+                    <!-- Shown while loading -->
+                    <div class="post-card-skeleton" style="background:#f1f5f9; border-radius:12px; height:280px; animation:skeletonPulse 1.5s ease-in-out infinite;"></div>
+                    <div class="post-card-skeleton" style="background:#f1f5f9; border-radius:12px; height:280px; animation:skeletonPulse 1.5s ease-in-out infinite; animation-delay:0.2s;"></div>
+                    <div class="post-card-skeleton" style="background:#f1f5f9; border-radius:12px; height:280px; animation:skeletonPulse 1.5s ease-in-out infinite; animation-delay:0.4s;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Features Section ── -->
+        <section class="features">
+            <div class="container">
+                <h2>Barnoota Kompitaraa fi Teeknolojiin wal qabatan baradhaa?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>Kompitara</h3>
+                        <p>Qaama(Hardware), Moosaajii(software) fi Suphaa(troubleshooting) kompitaraa afaan Oromootiin baradhaa</p>
+                        <a href="system/kompitara.html">Dabalata Dubbisaa →</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Bilbila</h3>
+                        <p>Bilbila suphaa, Appii fi koodii dhoksaa barachuu fi fayyadamuu ni dandeessu</p>
+                        <a href="system/bilbila.html">Dabalata Dubbisaa →</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Teeknoloojii</h3>
+                        <p>Oduu teeknoloojii Addunyaa fi miseensummaa haaraa online barachuu yoo barbaaddan galmaa'aa</p>
+                        <a href="system/teeknoloojii.html">Dabalata Dubbisaa →</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Barnoota AI</h3>
+                        <p>Artificial Intelligence fi Machine Learning waa'ee Afaan Oromootiin baradhaa</p>
+                        <a href="system/ai.html">Dabalata Dubbisaa →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Code Playground Section ── -->
+        <section class="playground-section">
+            <div data-playground></div>
+        </section>
+
+        <!-- ── FAQ / Advanced Topics Accordion ── -->
+        <section style="padding:60px 24px; background:var(--bg);">
+            <div style="max-width:900px; margin:0 auto;">
+                <h2 style="font-size:1.8rem; font-weight:800; color:var(--text-primary); margin-bottom:0.5rem; letter-spacing:-0.5px;">❓ Gaaffii fi Deebii (FAQ)</h2>
+                <p class="section-subtitle">Gaaffilee baay'inaan gaafataman — deebii argachuuf cuqaasaa</p>
+
+                <div class="accordion-group">
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <div class="accordion-title">💻 Kompitara jalqabaa irraa eessaa baranna?</div>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-body-inner">
+                                <p>Kompitara baruu jalqabuuf qaama (hardware) fi moosaajii (software) beekuun barbaachisaadha. Kutaa <strong>Kompitara</strong> keessatti:</p>
+                                <ul style="padding-left:1.25rem; margin-top:0.75rem; line-height:2;">
+                                    <li>Qaama kompitaraa (CPU, RAM, HDD/SSD)</li>
+                                    <li>Moosaajii fi OS (Windows, Linux)</li>
+                                    <li>Suphaa fi dhibee furuuf</li>
+                                </ul>
+                                <div style="margin-top:1rem;">
+                                    <span class="pro-tip" data-tip="Pro Tip: Jalqaba hardware baruu, booda software. Kun hubannoo cimsa!">
+                                        Jalqaba eessaa haa jalqabnu?
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <div class="accordion-title">🤖 AI baruu barbaadaa? Eessaa jalqabuu?</div>
+                            <span class="accordion-badge">Haaraa</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-body-inner">
+                                <p>Artificial Intelligence (AI) baruu kan barbaadaniif, kutaa <strong>Barnoota AI</strong> keessatti waan armaan gadii argatu:</p>
+                                <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.5rem;">
+                                    <div class="step-item" tabindex="0" role="checkbox" aria-checked="false">
+                                        <div class="step-check" aria-hidden="true"></div>
+                                        <div>
+                                            <div class="step-label">AI maali akka ta'e hubadhu</div>
+                                            <div class="step-desc">Seenaa fi gosa AI adda addaa</div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item" tabindex="0" role="checkbox" aria-checked="false">
+                                        <div class="step-check" aria-hidden="true"></div>
+                                        <div>
+                                            <div class="step-label">Machine Learning jalqabi</div>
+                                            <div class="step-desc">Algorithms fi data science</div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item" tabindex="0" role="checkbox" aria-checked="false">
+                                        <div class="step-check" aria-hidden="true"></div>
+                                        <div>
+                                            <div class="step-label">Meeshaalee AI fayyadami</div>
+                                            <div class="step-desc">ChatGPT, Gemini fi kanneen biroo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="margin-top:1rem; font-size:0.85rem; color:var(--text-muted);">Tarkaanfii tokko tokkoon cuqaasaa xumuraa ✓</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <div class="accordion-title">📱 Bilbila suphuu baruu danda'aa?</div>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-body-inner">
+                                <p>Eeyyee! Kutaa <strong>Bilbila</strong> keessatti bilbila Android fi iPhone suphuu, app install gochuu, fi koodii dhoksaa barachuu ni dandeessu.</p>
+                                <p style="margin-top:0.75rem;">
+                                    <span class="pro-tip" data-tip="Pro Tip: Bilbila keessan backup gochuu hin dagatinaa — suphaa dura!">
+                                        Gorsaa barbaachisaa
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <div class="accordion-title">🔐 Galmaa'uu fi seenuu akkamitti?</div>
+                            <span class="accordion-badge">Salphaa</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="accordion-body-inner">
+                                <p>Galmaa'uuf:</p>
+                                <ol style="padding-left:1.25rem; line-height:2; margin-top:0.5rem;">
+                                    <li><a href="system/user-register.html" style="color:var(--primary); font-weight:600;">Galmaa'i</a> fuula bani</li>
+                                    <li>Maqaa, email fi jecha darbii galchi</li>
+                                    <li>Erga galmaa'een booda <a href="system/user-login.html" style="color:var(--primary); font-weight:600;">seeni</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Comments Section ── -->
+        <section class="comments-section" style="padding:60px 20px; background:white;">
+            <div class="container">
+                <h2 style="text-align:center; margin-bottom:2rem; color:#1e293b;">Yaada Kennaa</h2>
+                <div class="comment-form-container" style="max-width:600px; margin:0 auto 3rem;">
+                    <form id="comment-form" style="background:#f8fafc; padding:2rem; border-radius:12px;">
+                        <input type="hidden" name="postId" value="homepage">
+                        <div class="form-group">
+                            <label for="comment" style="display:block; margin-bottom:0.5rem; color:#374151; font-weight:500;">Yaada Keessan:</label>
+                            <textarea id="comment" name="comment" required
+                                style="width:100%; padding:12px; border:2px solid #e5e7eb; border-radius:8px; font-size:1rem; min-height:120px; resize:vertical;"
+                                placeholder="Yaada keessan barreessaa..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">Yaada Ergi</button>
+                        <p style="font-size:0.8rem; color:#64748b; margin-top:0.5rem; text-align:center;">
+                            Yaada kennuuf duraan seenuu qabda.
+                            <a href="system/user-register.html" style="color:#2563eb;">Galmaa'i</a> ykn
+                            <a href="system/user-login.html" style="color:#2563eb;">Seeni</a>
+                        </p>
+                    </form>
+                </div>
+                <div id="comments-container" style="max-width:800px; margin:0 auto;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="system/kompitara.html">Kompitara</a></li>
+                        <li><a href="system/bilbila.html">Bilbila</a></li>
+                        <li><a href="system/teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="system/ai.html">Barnoota AI</a></li>
+                        <li><a href="system/social-media.html">Social Media</a></li>
+                        <li><a href="system/about-developer.html">About Us</a></li>
+                        <li><a href="system/admin-login.html" style="color: #fbbf24;">🔐 Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links" id="footer-social-links">
+                        <!-- Social links will be loaded dynamically from admin settings -->
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook">📘</a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube" style="display: inline-flex; align-items: center; gap: 4px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            YouTube
+                        </a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram">✈️</a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">🎵</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">📝</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                        👨‍💻 Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="language-switcher.js" defer></script>
+    <script src="user-auth.js" defer></script>
+    <script src="comments.js" defer></script>
+    <script src="chatbot.js" defer></script>
+    <script src="ui-components.js" defer></script>
+    <script>
+        // Update navigation based on user login status
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+            const userNavItem = document.getElementById('user-nav-item');
+            
+            if (currentUser) {
+                userNavItem.innerHTML = `
+                    <a href="system/user-dashboard.html" style="color: #059669; font-weight: 600;">👤 ${currentUser.fullname}</a>
+                    <button id="user-logout-btn" style="background: #dc2626; color: white; border: none; padding: 4px 8px; border-radius: 4px; margin-left: 8px; cursor: pointer;">Logout</button>
+                `;
+                
+                // Setup logout functionality
+                document.getElementById('user-logout-btn').addEventListener('click', () => {
+                    sessionStorage.removeItem('currentUser');
+                    window.location.reload();
+                });
+            }
+
+            // Load pinned posts
+            loadPinnedPosts();
+            
+            // Load social links
+            loadSocialLinks();
+        });
+
+        function loadSocialLinks() {
+            const socialLinks = JSON.parse(localStorage.getItem('clickict_social_links') || '[]');
+            const container = document.getElementById('footer-social-links');
+            
+            if (!container) return;
+            
+            const activeLinks = socialLinks.filter(link => link.active);
+            
+            if (activeLinks.length === 0) {
+                // Keep default links if no custom links are set
+                return;
+            }
+            
+            // Clear and add custom links
+            container.innerHTML = '';
+            
+            const platformIcons = {
+                'facebook': '📘',
+                'youtube': '📺',
+                'tiktok': '🎵',
+                'instagram': '📷',
+                'telegram': '✈️',
+                'twitter': '🐦',
+                'linkedin': '💼',
+                'whatsapp': '💬',
+                'blog': '📝'
+            };
+            
+            activeLinks.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.href = link.url;
+                linkElement.target = '_blank';
+                linkElement.setAttribute('aria-label', link.label || link.platform);
+                linkElement.textContent = platformIcons[link.platform] || '🔗';
+                linkElement.title = link.label || link.platform;
+                
+                container.appendChild(linkElement);
+            });
+        }
+        
+        // Listen for social links updates
+        window.addEventListener('socialLinksUpdated', () => {
+            loadSocialLinks();
+        });
+
+        function loadPinnedPosts() {
+            const posts = JSON.parse(localStorage.getItem('clickict_posts') || '[]');
+            const pinnedPosts = posts.filter(post => post.pinned && post.status === 'published');
+            
+            const container = document.getElementById('pinned-posts-container');
+            const section   = document.getElementById('pinned-posts-section');
+            if (!container || !section) return;
+            
+            if (pinnedPosts.length === 0) {
+                section.style.display = 'none';
+                return;
+            }
+            
+            section.style.display = 'block';
+            container.innerHTML = '';
+            
+            pinnedPosts.forEach(post => {
+                const postCard = document.createElement('article');
+                postCard.className = 'post-card';
+                postCard.style.position = 'relative';
+                
+                const imageHtml = post.image
+                    ? `<div class="post-image" style="background-image:url('${post.image}'); background-size:cover; background-position:center;"></div>`
+                    : `<div class="post-image" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);"></div>`;
+                
+                postCard.innerHTML = `
+                    <div style="position:absolute; top:10px; right:10px; background:#fbbf24; color:#1e293b;
+                                padding:4px 12px; border-radius:20px; font-weight:700; font-size:0.8rem;
+                                box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:2;">📌 Pinned</div>
+                    ${imageHtml}
+                    <div class="post-content">
+                        <span class="post-category">${post.category}</span>
+                        <h3>${post.title}</h3>
+                        ${post.subtitle ? `<p style="color:#64748b; font-size:0.95rem; margin-bottom:0.75rem;">${post.subtitle}</p>` : ''}
+                        <p>${post.content.substring(0, 130)}...</p>
+                        <div class="post-meta">
+                            <span>📅 ${new Date(post.date).toLocaleDateString()}</span>
+                        </div>
+                        ${post.link
+                            ? `<a href="${post.link}" target="_blank" class="btn btn-primary" style="margin-top:1rem; display:inline-block; text-decoration:none; font-size:0.85rem; padding:8px 18px;">Dabalata Dubbisaa →</a>`
+                            : `<button onclick="showPostModal(${JSON.stringify(post).replace(/"/g,'&quot;')})" class="btn btn-primary" style="margin-top:1rem; font-size:0.85rem; padding:8px 18px; border:none; cursor:pointer;">Dabalata Dubbisaa →</button>`
+                        }
+                    </div>`;
+                
+                container.appendChild(postCard);
+            });
+        }
+    </script>
+</body>
+</html>
+

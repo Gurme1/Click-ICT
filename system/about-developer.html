@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html" class="active">About Us</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om"> Afaan Oromoo</option>
+                            <option value="am"> አማርኛ</option>
+                            <option value="en"> English</option>
+                            <option value="ar"> አማርኛ</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;"></span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="kompitara.html"> Kompitara</a></li>
+            <li><a href="bilbila.html"> Bilbila</a></li>
+            <li><a href="teeknoloojii.html"> Teeknoloojii</a></li>
+            <li><a href="ai.html"> Barnoota AI</a></li>
+            <li><a href="social-media.html"> Social Media</a></li>
+            <li><a href="about-developer.html" class="active"> About Us</a></li>
+            <li><a href="user-login.html"> Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Meet the team behind ClickICT</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="developer-profile" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Developer Card -->
+                    <div class="content-card" style="text-align: center; margin-bottom: 3rem;">
+                        <img src="../img/img3.jpg" alt="Gurmessa Milki" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 2rem; display: block; border: 4px solid #667eea; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                        <h2 style="color: #1e293b; margin-bottom: 0.5rem;">Gurmessa Milki</h2>
+                    </div>
+
+                    <!-- Waa'ee Koo (About Me) Section -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;">Waa'ee Koo (About Me)</h3>
+                        <div style="color: #64748b; line-height: 1.6;">
+                            <p style="margin-bottom: 1rem;">
+                                Ani Gurmessa Milki jedhama. Barsiisaa teeknoloojii fi developer marsariitii ti. 
+                                Kaayyoon koo teeknoloojii afaan Oromootiin barsiisuu fi namootaaf danda'ama gochuudha.
+                            </p>
+                            <p style="margin-bottom: 1rem;">
+                                ClickICT marsariitii kana uumuun, barattootni afaan Oromootiin teeknoloojii barachuu 
+                                akka danda'an gochuuf carraaqeera. Kompitara, bilbila fi teeknoloojii haaraa hundumaa 
+                                waa'ee afaan keenyaan barsiisa.
+                            </p>
+                            <p style="margin-bottom: 1rem;">
+                                YouTube channel "OroComputer" irratti video barnoota baay'ee qaba. 
+                                Akkasumas blog fi social media irratti qabiyyee barnoota teeknoloojii afaan Oromootiin kenna.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Skills & Expertise -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;">Skills & Expertise</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Frontend Development</h4>
+                                <ul style="color: #64748b; line-height: 1.8;">
+                                    <li>HTML5, CSS3, JavaScript</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>UI/UX Design</li>
+                                    <li>Progressive Web Apps</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Backend Development</h4>
+                                <ul style="color: #64748b; line-height: 1.8;">
+                                    <li>Database Design</li>
+                                    <li>API Development</li>
+                                    <li>Content Management Systems</li>
+                                    <li>Email Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Educational Background & Professional Experience -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;"> Educational Background & Professional Experience</h3>
+                        
+                        <!-- Educational Background -->
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: #2563eb; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                 Academic Qualifications
+                            </h4>
+                            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="width: 50px; height: 50px; background: #0ea5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        MA
+                                    </div>
+                                    <div>
+                                        <h5 style="margin: 0; color: #1e293b;">Master of Arts in Information Technology</h5>
+                                        <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Advanced academic foundation in Information Technology</p>
+                                    </div>
+                                </div>
+                                <p style="color: #374151; margin: 0;">
+                                    Comprehensive graduate-level education providing deep understanding of IT systems, 
+                                    digital technologies, and modern computing solutions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Current Professional Roles -->
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: #2563eb; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                 Current Professional Roles
+                            </h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #22c55e;">
+                                    <h5 style="color: #16a34a; margin-bottom: 0.5rem;">አማርኛ? IT Teacher</h5>
+                                    <p style="color: #374151; margin: 0; font-size: 0.9rem;">
+                                        Educating students in Information Technology, promoting digital literacy 
+                                        and technical skills development.
+                                    </p>
+                                </div>
+                                <div style="background: #fefce8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #eab308;">
+                                    <h5 style="color: #ca8a04; margin-bottom: 0.5rem;"> IT Technician at ORIASC Communication</h5>
+                                    <p style="color: #374151; margin: 0; font-size: 0.9rem;">
+                                        Technical support, system maintenance, and IT infrastructure management 
+                                        for communication systems.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Mission & Expertise -->
+                        <div>
+                            <h4 style="color: #2563eb; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                 Professional Mission & Expertise
+                            </h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                                <div style="background: #fdf2f8; padding: 1rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                    <h5 style="color: #be185d; margin-bottom: 0.5rem;">Educational Mission</h5>
+                                    <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Promoting IT knowledge and digital literacy</p>
+                                </div>
+                                <div style="background: #f0f9ff; padding: 1rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                    <h5 style="color: #0284c7; margin-bottom: 0.5rem;">Content Creator Success</h5>
+                                    <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Helping others grow and thrive online</p>
+                                </div>
+                                <div style="background: #f0fdf4; padding: 1rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">???</div>
+                                    <h5 style="color: #16a34a; margin-bottom: 0.5rem;">Oromo Language Tech</h5>
+                                    <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Making IT accessible in local language</p>
+                                </div>
+                                <div style="background: #fef3c7; padding: 1rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                    <h5 style="color: #d97706; margin-bottom: 0.5rem;">Social Media Management</h5>
+                                    <p style="color: #64748b; font-size: 0.85rem; margin: 0;">Digital presence & audience engagement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Information -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;">About ClickICT Project</h3>
+                        <div style="color: #64748b; line-height: 1.6;">
+                            <p style="margin-bottom: 1rem;">
+                                ClickICT is a pioneering educational platform designed to provid Computer technology educational
+                                in Afaan Oromoo(Oromo language). This project addresses the critical need for 
+                                localized tech content in one of Africa's most widely spoken languages.
+                            </p>
+                            <h4 style="color: #2563eb; margin: 1.5rem 0 0.5rem;">Key Features:</h4>
+                            <ul style="line-height: 1.8;">
+                                <li>Comprehensive admin dashboard for content management</li>
+                                <li>User registration and comment system</li>
+                                <li>Responsive design for all devices</li>
+                                <li>Email notification system</li>
+                                <li>Multi-category content organization</li>
+                                <li>Image upload and management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;">Get in Touch</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                            <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 8px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Email</h4>
+                                <a href="mailto:gurmessa89@gmail.com" style="color: #64748b; text-decoration: none;">gurmessa89@gmail.com</a>
+                            </div>
+                            <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 8px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Services</h4>
+                                <p style="color: #64748b;">Web Development<br>Tech Education</p>
+                            </div>
+                            <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 8px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">??</div>
+                                <h4 style="color: #2563eb; margin-bottom: 0.5rem;">Mission</h4>
+                                <p style="color: #64748b;">Democratizing Tech Education</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="content-card">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem; text-align: center;">Connect with Gurmessa</h3>
+                        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                            <a href="https://facebook.com/OroComputerSchool" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #1877f2; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #ff0000; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://t.me/Orocomputer" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #0088cc; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="https://tiktok.com/@orocomputer" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #000000; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>TikTok</span>
+                            </a>
+                            <a href="https://www.gurmuu.blogspot.com" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #ff5722; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>Blog</span>
+                            </a>
+                            <a href="https://linkedin.com/in/gurmessa-milki" target="_blank" 
+                               class="social-link" style="display: flex; align-items: center; gap: 0.5rem; padding: 12px 20px; background: #0077b5; color: white; text-decoration: none; border-radius: 8px;">
+                                <span style="font-size: 1.2rem;">??</span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                        <p style="text-align: center; margin-top: 1rem; color: #64748b; font-size: 0.9rem;">
+                            Follow for updates on web development, technology education, and Oromo language tech content
+                        </p>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="content-card" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <h3 style="margin-bottom: 1rem;">Interested in Collaboration?</h3>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">
+                            Let's work together to create more educational technology solutions 
+                            that serve underrepresented communities.
+                        </p>
+                        <a href="mailto:gurmessa89@gmail.com" 
+                           style="background: white; color: #2563eb; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+                            Contact Gurmessa
+                        </a>
+                    </div>
+                
+                    <!-- Seenaa Keenya (About Us) Section -->
+                    <div class="content-card" style="margin-top: 2rem;">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem;"> Seenaa Keenya (About Us)</h3>
+                        <div style="color: #64748b; line-height: 1.8;">
+                            <p style="margin-bottom: 1rem; text-align: justify;">
+                                ClickICT kan hundeeffame rakkoo beekumsa teeknoloojii fi hawaasa keenya gidduu jiru dhiphisuufi. 
+                                Addunyaan keenya saffisaan gara dijitaalaatti jijjiiramaa osoo jirtuu, hawaasni keenya afaan 
+                                dhalootaatiin odeeffannoo teeknoloojii amansiisaa fi qulqullina qabu akka argatu gochuun kaayyoo 
+                                keenya isa ijoodha.
+                            </p>
+                            <p style="margin-bottom: 1rem; text-align: justify;">
+                                Nutis garee ogeessota teeknoloojii, pirograamaroota fi namoota dhimma kanaan jaalala qabaniin kan 
+                                ijaarramne yoo ta''u, barnoota Kompiitaraa, teeknoloojii bilbilaa fi kalaqa AI (Artificial Intelligence) 
+                                karaa salphaa ta''een isiniif dhiyeessina. ClickICT madda beekumsaa ammayyaa dhaloota har''aaf qophaa''edha.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Nuun Walquunnamaa (Contact Us) Section -->
+                    <div class="content-card" style="margin-top: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <h3 style="color: white; margin-bottom: 1.5rem;"> Nuun Walquunnamaa (Contact Us)</h3>
+                        <div style="line-height: 1.8;">
+                            <p style="margin-bottom: 1.5rem;">
+                                Gaaffii qabdu? Yaada nuuf qabdu moo deeggarsa ogummaa barbaaddu? Karaalee armaan gadiitiin 
+                                yeroo barbaaddan nu argachuu dandeessu:
+                            </p>
+                            <div style="display: grid; gap: 1rem; margin-top: 1.5rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                                    <span style="font-size: 1.5rem;"></span>
+                                    <div>
+                                        <strong>E-maelii:</strong><br>
+                                        <a href="mailto:gurmessa89@gmail.com" style="color: #fbbf24; text-decoration: none;">gurmessa89@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                                    <span style="font-size: 1.5rem;"></span>
+                                    <div>
+                                        <strong>Bilbila:</strong><br>
+                                        <a href="tel:+251917123477" style="color: #fbbf24; text-decoration: none;">+251 917123477</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                                    <span style="font-size: 1.5rem;"></span>
+                                    <div>
+                                        <strong>Telegiraama:</strong><br>
+                                        <a href="https://t.me/Orocomputer" target="_blank" style="color: #fbbf24; text-decoration: none;">@Orocomputer</a>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px;">
+                                    <span style="font-size: 1.5rem;"></span>
+                                    <div>
+                                        <strong>Feesbuukii:</strong><br>
+                                        <a href="https://facebook.com/OroComputerSchool" target="_blank" style="color: #fbbf24; text-decoration: none;">facebook.com/OroComputerSchool</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>marsariitii Kompitaraa fi Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook"></a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube"></a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram"></a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">??</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">??</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #94a3b8;">
+                    Developed by <strong style="color: #60a5fa;">Gurmessa Milki</strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../chatbot.js"></script>
+</body>
+</html>

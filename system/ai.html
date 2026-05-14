@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnoota AI - Artificial Intelligence Afaan Oromootiin | ClickICT</title>
+    <meta name="description" content="Artificial Intelligence (AI) Afaan Oromootiin baradhaa. Machine Learning, ChatGPT, Deep Learning fi AI tools waa'ee hubachuu. Free AI education in Oromo.">
+    <meta name="keywords" content="AI, artificial intelligence, machine learning, ChatGPT, deep learning, Afaan Oromoo, ClickICT, barnoota AI">
+    <meta name="author" content="Gurmessa Milki">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://clickict.com/system/ai.html">
+    <meta property="og:title" content="Barnoota AI - ClickICT">
+    <meta property="og:description" content="Artificial Intelligence Afaan Oromootiin baradhaa. Machine Learning, ChatGPT fi AI tools.">
+    <meta property="og:image" content="https://clickict.com/img/lo.jpg">
+    <meta property="og:url" content="https://clickict.com/system/ai.html">
+    <link rel="icon" type="image/jpeg" href="../img/lo.jpg">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html" class="active">Barnoota AI</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om"> Afaan Oromoo</option>
+                            <option value="am"> አማርኛ</option>
+                            <option value="en"> English</option>
+                            <option value="ar">🇸🇦 العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;"></span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="kompitara.html"> Kompitara</a></li>
+            <li><a href="bilbila.html"> Bilbila</a></li>
+            <li><a href="teeknoloojii.html"> Teeknoloojii</a></li>
+            <li><a href="ai.html" class="active"> Barnoota AI</a></li>
+            <li><a href="social-media.html"> Social Media</a></li>
+            <li><a href="about-developer.html"> About Us</a></li>
+            <li><a href="user-login.html"> Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <div class="container">
+                <h1>🤖 Artificial Intelligence (AI)</h1>
+                <p>Sammuu Namtolchee fi Teeknoloojii Egeree Afaan Oromootiin Hubachuu</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <!-- AI Introduction -->
+                <div class="content-card" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 4px solid #667eea;">
+                    <h2 style="color: #667eea;">🤖 AI Maal Jechuu Dha?</h2>
+                    <p>Artificial Intelligence (AI) ykn Sammuu Namtolchee teknooloojii kompitara fi maashinii akka namaa yaaduu fi hojjechuu dandeessisudha. AI kompitaroonni barnoota barachuu, murtoo kennuu, fi rakkoo furuu akka danda'an taasisa.</p>
+                    <p>AI teknooloojii har'a addunyaa keessatti jijjiirama guddaa fida jira. Bilbila keessan irraa kaasee hanga konkolaataa ofiin oofamaniitti, AI jireenya keenya keessatti bakka guddaa qaba.</p>
+                    
+                    <h3 style="color: #667eea; margin-top: 2rem;"> Seenaa AI</h3>
+                    <p>Yaadni AI bara 1950moota keessa jalqabe. Alan Turing gaaffii "Maashiniin yaaduu ni danda'aa?" jedhu dhiyeesse. Waggoota 70 darban keessatti, AI guddina guddaa argateera:</p>
+                    <ul style="line-height: 2;">
+                        <li><strong>1950s:</strong> Alan Turing "Turing Test" uume - maashiniin sammuu qabaachuu isaa mirkaneessuu</li>
+                        <li><strong>1956:</strong> Jecha "Artificial Intelligence" jalqaba yeroo Dartmouth Conference irratti fayyadame</li>
+                        <li><strong>1997:</strong> IBM Deep Blue chess keessatti champion addunyaa Garry Kasparov mo'ate</li>
+                        <li><strong>2011:</strong> IBM Watson tapha Jeopardy! keessatti namootaa mo'ate</li>
+                        <li><strong>2016:</strong> Google DeepMind AlphaGo tapha Go keessatti champion addunyaa Lee Sedol mo'ate</li>
+                        <li><strong>2022:</strong> ChatGPT bahe - AI chatbot beekamaa ta'e</li>
+                        <li><strong>2023-2025:</strong> AI guddina ariifataa argachaa jira - GPT-4, Gemini, Claude fi kanneen biroo</li>
+                    </ul>
+
+                    <h3 style="color: #667eea; margin-top: 2rem;"> Kaayyoo AI</h3>
+                    <p>AI kaayyoo gurguddoo lama qaba:</p>
+                    <ol style="line-height: 2;">
+                        <li><strong>Hojii Namaa Salphisuu:</strong> Hojii yeroo fudhatu fi dadhabsiisu maashinii akka hojjetu gochuu</li>
+                        <li><strong>Sammuu Namaa Caalu Uumuu:</strong> Maashinii sammuu namaa caalaa ogeessa ta'u uumuu (egeree keessatti)</li>
+                    </ol>
+
+                    <h3 style="color: #667eea; margin-top: 2rem;">🤖 AI Akkamitti Hojjeta - Ibsa Bal'aa</h3>
+                    <p>AI hojjechuu isaa bu'uura sadii irratti hundaa'a:</p>
+                    
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">1. Daataa (Data)</h4>
+                    <p>AI daataa baay'ee barbaada. Daataa kun suuraa, barreeffama, sagalee, viidiyoo ykn lakkoofsa ta'uu danda'a. Daataa baay'ee yoo argatte, AI barnoota gaarii barata.</p>
+                    <p><strong>Fakkeenya:</strong> ChatGPT interneetii irraa barreeffama biiliyoonaan lakkaa'amu irraa barate. Kanaaf gaaffii kamiyyuu deebisuu danda'a.</p>
+
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">2. Algorithm (Tartiiba Hojii)</h4>
+                    <p>Algorithm qajeelfama AI daataa irraa barnoota barachuuf fayyadamudha. Akka recipe nyaata qopheessuutti, algorithm AI leenjisuu keessatti fayyadama.</p>
+                    <p><strong>Gosa Algorithm AI:</strong></p>
+                    <ul>
+                        <li><strong>Supervised Learning:</strong> AI daataa label qaban irraa barata (fakkeenya: suuraa saree fi suuraa bosonaa adda baasuu)</li>
+                        <li><strong>Unsupervised Learning:</strong> AI daataa label hin qabne irraa akkaataa ofii isaatiin barata</li>
+                        <li><strong>Reinforcement Learning:</strong> AI yaalii fi dogongora irraa barata (akka ijoollee barachuu)</li>
+                    </ul>
+
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">3. Computing Power (Humna Shallaguu)</h4>
+                    <p>AI shallaguu baay'ee barbaada. Kanaaf GPU (Graphics Processing Unit) fi TPU (Tensor Processing Unit) fayyadamu. Kompitarri humna guddaa qabu AI ariifataa taasisa.</p>
+
+                    <h3 style="color: #667eea; margin-top: 2rem;"> Teknooloojii AI Ijoo</h3>
+                    
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">Machine Learning (ML)</h4>
+                    <p>Machine Learning qaamni AI kan kompitarri daataa irraa ofumaan barachuu danda'uudha. Programmer qajeelfama hundumaa barreessuu osoo hin barbaachifne, kompitarri fakkeenya irraa barata.</p>
+                    <p><strong>Fakkeenya Jireenyaa:</strong></p>
+                    <ul>
+                        <li>Netflix fi YouTube waan isin ilaaltan irratti hundaa'uun waan isinitti tolu gorsuu</li>
+                        <li>Email spam fi email gaarii adda baasuu</li>
+                        <li>Bankii daldala soba (fraud) adda baasuu</li>
+                    </ul>
+
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">Deep Learning (DL)</h4>
+                    <p>Deep Learning gosa Machine Learning kan neural networks (network sammuu namaa fakkaatu) fayyadamudha. "Deep" jedhamuun layer (laayibarii) baay'ee qabaachuu isaa agarsiisa.</p>
+                    <p><strong>Fakkeenya:</strong></p>
+                    <ul>
+                        <li>Suuraa keessaa fuula namaa adda baasuu (Face Recognition)</li>
+                        <li>Sagalee namaa barreeffamatti jijjiiruu (Speech to Text)</li>
+                        <li>Afaan tokko gara afaan biraatti hiikuu (Translation)</li>
+                        <li>Konkolaataa ofiin oofaman (Self-driving cars)</li>
+                    </ul>
+
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">Natural Language Processing (NLP)</h4>
+                    <p>NLP teknooloojii AI afaan namaa hubachuu fi deebisuu dandeessisudha. Kun ChatGPT, Siri, Alexa fi Google Assistant keessatti fayyadama.</p>
+                    <p><strong>Hojiiwwan NLP:</strong></p>
+                    <ul>
+                        <li>Barreeffama hubachuu fi hiikuu</li>
+                        <li>Gaaffii deebisuu</li>
+                        <li>Barreeffama uumuu (Content Generation)</li>
+                        <li>Sentiment Analysis (yaada namootaa hubachuu)</li>
+                        <li>Chatbot fi Virtual Assistant</li>
+                    </ul>
+
+                    <h4 style="color: #2563eb; margin-top: 1.5rem;">Computer Vision</h4>
+                    <p>Computer Vision AI suuraa fi viidiyoo hubachuu dandeessisa. Akka ija namaatti, AI waan arguu hubachuu danda'a.</p>
+                    <p><strong>Fayyadama:</strong></p>
+                    <ul>
+                        <li>Fuula namaa adda baasuu (Face Recognition)</li>
+                        <li>Meeshaa suuraa keessaa adda baasuu (Object Detection)</li>
+                        <li>Dhukkuba suuraa medical irraa adda baasuu</li>
+                        <li>Konkolaataa ofiin oofaman daandii arguu</li>
+                        <li>Quality control industry keessatti</li>
+                    </ul>
+                </div>
+
+                <!-- Types of AI -->
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3> Gosa AI</h3>
+                        <h4 style="color: #2563eb; margin-top: 1rem;">1. Narrow AI (Weak AI)</h4>
+                        <p>AI hojii murtaa'e tokko qofa hojjetu. Fakkeenyaaf: Siri, Alexa, Google Assistant.</p>
+                        
+                        <h4 style="color: #2563eb; margin-top: 1rem;">2. General AI (Strong AI)</h4>
+                        <p>AI akka namaa hojii hundumaa hojjechuu dandeessu. Ammallee guutummaatti hin uumamne.</p>
+                        
+                        <h4 style="color: #2563eb; margin-top: 1rem;">3. Super AI</h4>
+                        <p>AI sammuu namaa caalaa ogeessa ta'u. Egeree keessatti dhufuu danda'a.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3> AI Akkamitti Hojjeta?</h3>
+                        <ul style="line-height: 2;">
+                            <li><strong>Machine Learning:</strong> Kompitarri daataa irraa barnoota barachuu</li>
+                            <li><strong>Deep Learning:</strong> Neural networks fayyadamuun barnoota gadi fagoo</li>
+                            <li><strong>Natural Language Processing:</strong> Afaan namaa hubachuu fi deebisuu</li>
+                            <li><strong>Computer Vision:</strong> Suuraa fi viidiyoo hubachuu</li>
+                            <li><strong>Robotics:</strong> Robootota ofiin hojjetan uumuu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular AI Tools -->
+                <section class="ai-tools-section" style="margin: 3rem 0;">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #1e293b;">🛠️ Meeshaalee AI Beekamoo</h2>
+                    <div class="content-grid">
+                        <div class="content-card" style="border-top: 4px solid #10b981;">
+                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">??</div>
+                            <h3 style="color: #10b981;">ChatGPT</h3>
+                            <p>AI chatbot OpenAI irraa kan uumame. Gaaffii deebisuu, barreeffama barreessuu, koodii barreessuu fi hojii biroo baay'ee hojjeta.</p>
+                            <ul>
+                                <li>Gaaffii afaan uumamaa deebisuu</li>
+                                <li>Barreeffama uumuu fi gulaalu</li>
+                                <li>Koodii programming barreessuu</li>
+                                <li>Afaan hiikuu</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="border-top: 4px solid #3b82f6;">
+                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">??</div>
+                            <h3 style="color: #3b82f6;">DALL-E & Midjourney</h3>
+                            <p>AI suuraa barreeffama irraa uumu. Yaada keessan barreessaa, AI suuraa miidhagaa isiniif uuma.</p>
+                            <ul>
+                                <li>Suuraa barreeffama irraa uumuu</li>
+                                <li>Dizaayinii fi artwork uumuu</li>
+                                <li>Suuraa jijjiiruu fi fooyya'uu</li>
+                                <li>Kalaqaa artistii gargaaruu</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="border-top: 4px solid #8b5cf6;">
+                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">??</div>
+                            <h3 style="color: #8b5cf6;">AI Music & Voice</h3>
+                            <p>AI muuziqaa uumuu fi sagalee jijjiiruu danda'a. Fakkeenyaaf: Suno AI, ElevenLabs.</p>
+                            <ul>
+                                <li>Muuziqaa uumuu</li>
+                                <li>Sagalee jijjiiruu</li>
+                                <li>Text to Speech</li>
+                                <li>Voice cloning</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="border-top: 4px solid #f59e0b;">
+                            <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">??</div>
+                            <h3 style="color: #f59e0b;">AI Video Tools</h3>
+                            <p>AI viidiyoo uumuu fi gulaalu danda'a. Fakkeenyaaf: Runway ML, Synthesia.</p>
+                            <ul>
+                                <li>Viidiyoo barreeffama irraa uumuu</li>
+                                <li>Viidiyoo edit gochuu</li>
+                                <li>Avatar AI uumuu</li>
+                                <li>Special effects dabaluu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Applications -->
+                <section class="ai-applications">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">🤖 AI Iddoo Kamitti Fayyadama?</h2>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3> Fayyaa</h3>
+                            <p>AI dhukkuba adda baasuu, qoricha gorsuu, fi yaala fooyya'uu keessatti fayyadama.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3> Konkolaataa</h3>
+                            <p>Konkolaataa ofiin oofaman (Self-driving cars) AI fayyadamuun hojjetu.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3> Maallaqaa</h3>
+                            <p>Bankii fi daldala maallaqaa keessatti fraud adda baasuu fi investment gorsuu.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3> Barnoota</h3>
+                            <p>Barnoota dhuunfaa kennuu, gaaffii deebisuu, fi barattootaaf gargaaruu.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3> Daldala</h3>
+                            <p>Maamiltootaaf gorsaa kennuu, inventarii bulchuu, fi marketing.</p>
+                        </div>
+                        <div class="content-card">
+                            <h3> Tapha</h3>
+                            <p>Tapha keessatti NPC (Non-Player Characters) ogeessa uumuu.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future of AI -->
+                <div class="content-card" style="background: linear-gradient(135deg, #fbbf2415 0%, #f59e0b15 100%); border-left: 4px solid #f59e0b; margin-top: 3rem;">
+                    <h2 style="color: #f59e0b;"> Egeree AI</h2>
+                    <p>AI teknooloojii guddachaa fi jijjiiramaa jiru. Waggoota dhufan keessatti:</p>
+                    <ul style="line-height: 2;">
+                        <li>AI hojii baay'ee namaa bakka bu'uu danda'a</li>
+                        <li>Fayyaa fi barnoota keessatti jijjiirama guddaa fida</li>
+                        <li>Konkolaataa ofiin oofaman baay'achuu</li>
+                        <li>AI assistant dhuunfaa hundaaf argamu</li>
+                        <li>Rakkoolee addunyaa (climate change, dhukkuba, hiyyummaa) furuu keessatti gargaara</li>
+                    </ul>
+                </div>
+
+                <!-- AI Benefits -->
+                <section class="ai-benefits" style="margin-top: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #10b981;">✅ Faayidaa AI</h2>
+                    <div class="content-grid">
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3>⚡ Saffisa fi Gahumsa</h3>
+                            <p>AI hojii sa'aatii fudhatu daqiiqaa muraasa keessatti xumuruu danda'a. Dogongora namaa hir'isa.</p>
+                            <p><strong>Fakkeenya:</strong> AI suuraa kuma 1000 daqiiqaa 5 keessatti qorachuu danda'a, namni garuu guyyoota baay'ee fudhata.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3> 24/7 Hojii</h3>
+                            <p>AI boqonnaa hin barbaadu. Guyyaa guutuu hojjechuu danda'a. Kun tajaajila maamiltootaaf gaarii dha.</p>
+                            <p><strong>Fakkeenya:</strong> Chatbot halkan guutuu gaaffii maamiltootaa deebisuu danda'a.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3> Daataa Guddaa Qorachuu</h3>
+                            <p>AI daataa guddaa (Big Data) saffisaan qorachuu fi hubannoo (insights) argachuu danda'a.</p>
+                            <p><strong>Fakkeenya:</strong> Daldaltoonni daataa maamiltootaa qorachuun waan maamiltoonni barbaadan hubatu.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3> Dhuunfachuu (Personalization)</h3>
+                            <p>AI nama hundaaf tajaajila addaa kennuu danda'a. Waan isin jaallattan hubatee isinitti dhiyeessa.</p>
+                            <p><strong>Fakkeenya:</strong> Spotify muuziqaa isin jaallattan isinitti gorsuu, Netflix film isinitti tolu agarsiisuu.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3> Fayyaa Fooyya'uu</h3>
+                            <p>AI dhukkuba dafee adda baasuu, yaala gaarii gorsuu, fi qoricha haaraa argachuu keessatti gargaara.</p>
+                            <p><strong>Fakkeenya:</strong> AI kaansarii suuraa X-ray irraa dafee adda baasuu danda'a.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #10b981;">
+                            <h3> Rakkoo Addunyaa Furuu</h3>
+                            <p>AI jijjiirama qilleensaa, hiyyummaa, fi rakkoolee biroo furuu keessatti gargaaruu danda'a.</p>
+                            <p><strong>Fakkeenya:</strong> AI qonna fooyya'uu, bishaan qulqulluu argachuu keessatti gargaara.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Challenges -->
+                <section class="ai-challenges" style="margin-top: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #ef4444;">⚠️ Rakkoolee fi Yaaddoo AI</h2>
+                    <div class="content-grid">
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> Hojii Dhabuu</h3>
+                            <p>AI hojii baay'ee namaa bakka bu'uu waan danda'uuf, namoonni baay'een hojii isaanii dhabuu danda'u.</p>
+                            <p><strong>Furmaata:</strong> Namoonni leenjii haaraa fudhachuun hojii AI waliin hojjechuu danda'an barbaadu.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> Iccitii fi Nageenyaa</h3>
+                            <p>AI daataa dhuunfaa baay'ee walitti qaba. Kun yaaddoo iccitii fi nageenyaa uuma.</p>
+                            <p><strong>Yaaddoo:</strong> Daataa keessan eenyutu argachuu danda'a? Akkamitti fayyadamu?</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> Loogii fi Mirga Namoomaa</h3>
+                            <p>AI murtoo hin malleen kennuu danda'a. Kun loogii fi mirga namoomaa keessatti rakkoo uumuu danda'a.</p>
+                            <p><strong>Fakkeenya:</strong> AI hojii kennuu keessatti nama tokko sababii adda addaatiin filachuu danda'a.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> Deepfake fi Soba</h3>
+                            <p>AI suuraa fi viidiyoo soba (fake) uumuu danda'a. Kun odeeffannoo soba babal'isuuf fayyadamuu danda'a.</p>
+                            <p><strong>Balaa:</strong> Namoonni viidiyoo soba fayyadamuun nama biraa maqaa balleessuu danda'u.</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> AI To'annoo Jalaa Ba'uu</h3>
+                            <p>Ogeessoonni tokko tokko AI humna guddaa argachuun namootaa irratti to'annoo qabaachuu akka danda'u sodaatu.</p>
+                            <p><strong>Yaaddoo:</strong> Yoo AI sammuu namaa caale maal ta'a? Eenyutu to'ata?</p>
+                        </div>
+
+                        <div class="content-card" style="border-left: 4px solid #ef4444;">
+                            <h3> Gatii Guddaa</h3>
+                            <p>AI leenjisuu fi hojii irra oolchuu baasii guddaa barbaada. Kun dhaabbilee xixiqqoof rakkisaa ta'uu danda'a.</p>
+                            <p><strong>Rakkoo:</strong> Dhaabbileen gurguddoo qofa AI fayyadamuu danda'u, kun wal qixxummaa dhabuu uuma.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Ethics -->
+                <div class="content-card" style="background: linear-gradient(135deg, #8b5cf615 0%, #6366f115 100%); border-left: 4px solid #8b5cf6; margin-top: 3rem;">
+                    <h2 style="color: #8b5cf6;"> Seera fi Naamusa AI (AI Ethics)</h2>
+                    <p>AI guddachaa waan jiruuf, seera fi naamusa AI irratti xiyyeeffannoo kennuu barbaachisaa dha:</p>
+                    
+                    <h3 style="color: #8b5cf6; margin-top: 1.5rem;">Seera AI Ijoo:</h3>
+                    <ol style="line-height: 2;">
+                        <li><strong>Iftoomina (Transparency):</strong> AI akkamitti murtoo kennuu ifatti ibsuu qaba</li>
+                        <li><strong>Itti Gaafatamummaa (Accountability):</strong> Yoo AI dogongora hojjete eenyutu itti gaafatama?</li>
+                        <li><strong>Haqa (Fairness):</strong> AI nama hundaaf haqaan hojjechuu qaba, loogii hin qabaanne</li>
+                        <li><strong>Iccitii (Privacy):</strong> Daataa dhuunfaa namootaa eeguu fi kabajuu</li>
+                        <li><strong>Nageenyaa (Safety):</strong> AI miidhaa namootaaf hin geessisne</li>
+                        <li><strong>Fayyadama Gaarii (Beneficial Use):</strong> AI faayidaa namaaf kennuuf qofa fayyadamuu</li>
+                    </ol>
+
+                    <h3 style="color: #8b5cf6; margin-top: 1.5rem;">Gaaffii Naamusa AI:</h3>
+                    <ul style="line-height: 2;">
+                        <li>AI hojii namaa bakka bu'uu qabaa?</li>
+                        <li>AI waraana keessatti fayyadamuu ni danda'amaa?</li>
+                        <li>Eenyutu daataa keenya to'ata?</li>
+                        <li>AI mirga qabaachuu qabaa?</li>
+                        <li>Biyyoonni AI akkamitti to'achuu qabu?</li>
+                    </ul>
+
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                        <strong>Yaadannoo:</strong> AI meeshaa humna guddaa qabuu dha. Akka meeshaa kamiiyyuutti, gaarii ykn badaa ta'uu isaa namni akkamitti fayyadamu irratti hundaa'a. Kanaaf AI haala gaarii fi seera qabeessa ta'een fayyadamuu barbaachisaa dha.
+                    </p>
+                </div>
+
+                <!-- How to Start with AI -->
+                <section class="getting-started" style="margin-top: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea;">🤖 AI Jalqabuu Barbaaddu? Asii Jalqabaa!</h2>
+                    <div class="content-grid">
+                        <div class="content-card" style="background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);">
+                            <h3>1📚 Bu'uura Barachuu</h3>
+                            <ul>
+                                <li>Mathematics: Algebra, Calculus, Statistics</li>
+                                <li>Programming: Python barachuu jalqabaa</li>
+                                <li>Data Science: Daataa akkamitti qorachuu</li>
+                                <li>Machine Learning bu'uura hubachuu</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);">
+                            <h3>2🛠️ Meeshaalee Fayyadamuu Jalqabuu</h3>
+                            <ul>
+                                <li>ChatGPT fayyadamuun AI hubachuu</li>
+                                <li>Google Colab irratti Python barreessuu</li>
+                                <li>Kaggle irratti project xixiqqoo hojjechuu</li>
+                                <li>GitHub irratti code keessan olkaa'uu</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);">
+                            <h3>3️⃣ Project Hojjechuu</h3>
+                            <ul>
+                                <li>Chatbot salphaa uumuu</li>
+                                <li>Suuraa adda baasuu (Image Classification)</li>
+                                <li>Sentiment Analysis hojjechuu</li>
+                                <li>Recommendation System uumuu</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card" style="background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);">
+                            <h3>4️⃣ Hawaasa Seenuu</h3>
+                            <ul>
+                                <li>AI communities online seenuu</li>
+                                <li>Meetup fi conference AI dhaquu</li>
+                                <li>Ogeessota AI hordofuu</li>
+                                <li>Blog fi article AI dubbisuu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Learning Resources -->
+                <section class="learning-section" style="margin-top: 3rem;">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">🤖 AI Barachuu Barbaaddu?</h2>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h3> Barnoota Online</h3>
+                            <ul>
+                                <li>Coursera - AI for Everyone</li>
+                                <li>Google AI - Machine Learning Crash Course</li>
+                                <li>Fast.ai - Practical Deep Learning</li>
+                                <li>YouTube - AI tutorials</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3> Programming Languages</h3>
+                            <ul>
+                                <li>Python - AI programming #1</li>
+                                <li>R - Data science fi statistics</li>
+                                <li>JavaScript - AI web applications</li>
+                                <li>Julia - Scientific computing</li>
+                            </ul>
+                        </div>
+                        <div class="content-card">
+                            <h3>🛠️ AI Tools & Libraries</h3>
+                            <ul>
+                                <li>TensorFlow - Google AI framework</li>
+                                <li>PyTorch - Facebook AI framework</li>
+                                <li>Scikit-learn - Machine learning</li>
+                                <li>Keras - Deep learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="seenaa.html">Seenaa & Siyaasa</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                        <li><a href="contact.html">Nu Qunnamaa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook"></a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube"></a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram"></a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">??</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">??</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                         Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../chatbot.js"></script>
+</body>
+</html>

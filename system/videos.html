@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="videos.html" class="active">📹 Videos</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="user-login.html" style="color: #059669;">Login</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om">🇪🇹 Afaan Oromoo</option>
+                            <option value="am">🇪🇹 አማርኛ</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="ar">🇸🇦 العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">🕐</span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="kompitara.html">💻 Kompitara</a></li>
+            <li><a href="bilbila.html">📱 Bilbila</a></li>
+            <li><a href="teeknoloojii.html">🌐 Teeknoloojii</a></li>
+            <li><a href="ai.html">🤖 Barnoota AI</a></li>
+            <li><a href="videos.html" class="active">📹 Videos</a></li>
+            <li><a href="social-media.html">📲 Social Media</a></li>
+            <li><a href="about-developer.html">👨‍💻 About Us</a></li>
+            <li><a href="user-login.html">🔐 Login</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>📹 Video Barnoota</h1>
+                <p>Barnoota Teeknoloojii video dhaan hubachuu fi barachuu</p>
+            </div>
+        </section>
+
+        <!-- Featured Videos Section -->
+        <section id="featured-videos-section" style="padding: 40px 20px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); display: none;">
+            <div class="container">
+                <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">⭐ Featured Videos</h2>
+                <div id="featured-videos-container" class="posts-grid">
+                    <!-- Featured videos will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section style="padding: 20px; background: white;">
+            <div class="container">
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <button class="category-filter-btn active" data-category="all" style="padding: 10px 20px; border: 2px solid #2563eb; background: #2563eb; color: white; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        All Videos
+                    </button>
+                    <button class="category-filter-btn" data-category="kompitara" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        💻 Kompitara
+                    </button>
+                    <button class="category-filter-btn" data-category="bilbila" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        📱 Bilbila
+                    </button>
+                    <button class="category-filter-btn" data-category="teeknoloojii" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        🌐 Teeknoloojii
+                    </button>
+                    <button class="category-filter-btn" data-category="ai" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        🤖 AI
+                    </button>
+                    <button class="category-filter-btn" data-category="tutorial" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        📚 Tutorial
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Videos Section -->
+        <section style="padding: 40px 20px; background: #f8fafc;">
+            <div class="container">
+                <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">📹 All Videos</h2>
+                <div id="videos-container" class="posts-grid">
+                    <!-- Videos will be loaded here -->
+                </div>
+                
+                <div id="no-videos-message" style="display: none; text-align: center; padding: 3rem; color: #64748b;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">📹 No videos available yet</p>
+                    <p>Check back soon for new video content!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook">📘</a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube">📺</a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram">✈️</a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">🎵</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">📝</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                        👨‍💻 Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../user-auth.js"></script>
+    <script src="../chatbot.js"></script>
+    <script>
+        // Load videos from localStorage
+        function loadVideos() {
+            const videos = JSON.parse(localStorage.getItem('clickict_videos') || '[]');
+            const videosContainer = document.getElementById('videos-container');
+            const featuredContainer = document.getElementById('featured-videos-container');
+            const featuredSection = document.getElementById('featured-videos-section');
+            const noVideosMessage = document.getElementById('no-videos-message');
+            
+            // Filter featured videos
+            const featuredVideos = videos.filter(video => video.featured);
+            
+            // Show/hide featured section
+            if (featuredVideos.length > 0) {
+                featuredSection.style.display = 'block';
+                displayVideos(featuredVideos, featuredContainer);
+            } else {
+                featuredSection.style.display = 'none';
+            }
+            
+            // Display all videos
+            if (videos.length === 0) {
+                noVideosMessage.style.display = 'block';
+                videosContainer.innerHTML = '';
+            } else {
+                noVideosMessage.style.display = 'none';
+                displayVideos(videos, videosContainer);
+            }
+        }
+
+        function displayVideos(videos, container) {
+            container.innerHTML = '';
+            
+            videos.forEach(video => {
+                const videoCard = createVideoCard(video);
+                container.appendChild(videoCard);
+            });
+        }
+
+        function createVideoCard(video) {
+            const card = document.createElement('article');
+            card.className = 'post-card';
+            card.dataset.category = video.category;
+            
+            // Extract YouTube video ID
+            const videoId = extractYouTubeId(video.url);
+            const thumbnailUrl = video.thumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            
+            card.innerHTML = `
+                <div class="post-image" style="background-image: url('${thumbnailUrl}'); height: 200px; background-size: cover; background-position: center; position: relative;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255,0,0,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;" onclick="playVideo('${video.url}', '${video.title}')">
+                        <span style="color: white; font-size: 24px; margin-left: 4px;">▶</span>
+                    </div>
+                    ${video.duration ? `<div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">${video.duration}</div>` : ''}
+                </div>
+                <div class="post-content">
+                    <span class="post-category">${video.category}</span>
+                    <h3 style="margin: 0.5rem 0 1rem; color: #1e293b;">${video.title}</h3>
+                    <p style="color: #64748b; line-height: 1.6;">${video.description.substring(0, 120)}...</p>
+                    <div class="post-meta" style="margin-top: 1rem;">
+                        <span>${new Date(video.date).toLocaleDateString()}</span>
+                        ${video.featured ? '<span style="color: #f59e0b;">⭐ Featured</span>' : ''}
+                    </div>
+                    <button onclick="playVideo('${video.url}', '${video.title}')" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">
+                        ▶ Watch Video
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        function playVideo(url, title) {
+            // Create modal for video playback
+            const modal = document.createElement('div');
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; display: flex; align-items: center; justify-content: center;';
+            
+            const videoId = extractYouTubeId(url);
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            
+            modal.innerHTML = `
+                <div style="width: 90%; max-width: 1200px; position: relative;">
+                    <button onclick="this.parentElement.parentElement.remove()" style="position: absolute; top: -40px; right: 0; background: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; color: #1e293b;">×</button>
+                    <h2 style="color: white; margin-bottom: 1rem; text-align: center;">${title}</h2>
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe src="${embedUrl}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close on background click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        // Category filtering
+        document.querySelectorAll('.category-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.category-filter-btn').forEach(b => {
+                    b.style.background = 'white';
+                    b.style.color = '#2563eb';
+                    b.classList.remove('active');
+                });
+                btn.style.background = '#2563eb';
+                btn.style.color = 'white';
+                btn.classList.add('active');
+                
+                // Filter videos
+                const category = btn.dataset.category;
+                const videoCards = document.querySelectorAll('#videos-container .post-card');
+                
+                videoCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Update navigation based on user login status
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+            const userNavItem = document.getElementById('user-nav-item');
+            
+            if (currentUser) {
+                userNavItem.innerHTML = `
+                    <span style="color: #059669;">Baga nagaan dhufte, ${currentUser.fullname}!</span>
+                    <button id="user-logout-btn" style="background: #dc2626; color: white; border: none; padding: 4px 8px; border-radius: 4px; margin-left: 8px; cursor: pointer;">Logout</button>
+                `;
+                
+                document.getElementById('user-logout-btn').addEventListener('click', () => {
+                    if (window.userAuth) {
+                        window.userAuth.logout();
+                    }
+                });
+            }
+
+            // Load videos
+            loadVideos();
+        });
+    </script>
+</body>
+</html>

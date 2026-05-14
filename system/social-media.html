@@ -1,0 +1,852 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="social-media.html" class="active">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="user-login.html" style="color: #059669;">Login</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om"> Afaan Oromoo</option>
+                            <option value="am"> አማርኛ</option>
+                            <option value="en"> English</option>
+                            <option value="ar"> العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;"></span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="kompitara.html"> Kompitara</a></li>
+            <li><a href="bilbila.html"> Bilbila</a></li>
+            <li><a href="teeknoloojii.html"> Teeknoloojii</a></li>
+            <li><a href="ai.html"> Barnoota AI</a></li>
+            <li><a href="social-media.html" class="active"> Social Media</a></li>
+            <li><a href="about-developer.html"> About Us</a></li>
+            <li><a href="user-login.html"> Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Social Media</h1>
+                <p>Miidiyaa Hawaasummaa fi Neetworkii Hawaasaa Afaan Oromootiin Hubachuu</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                
+                <!-- Introduction Section -->
+                <section style="margin-bottom: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 12px; color: white;">
+                    <h2 style="color: white; margin-bottom: 1.5rem; text-align: center;">📱 Waa'ee Social Media (Miidiyaa Hawaasummaa)</h2>
+                    <p style="line-height: 1.8; text-align: justify; font-size: 1.05rem;">
+                        <strong>Social Media</strong> ykn <strong>Miidiyaa Hawaasummaa</strong> marsariitii fi appilikeeshinoota namoonni odeeffannoo, yaada, suuraa, viidiyoo fi qabiyyee biroo waliin qoodachuuf fayyadaman dha. Bara ammaa kana social media jireenya keenyaa keessatti gahee guddaa qaba. Maatii, hiriyyoota fi namoota addunyaa guutuutti argaman waliin quunnamuuf, beekumsa argachuuf, daldala hojjechuuf fi bashannanuuf ni fayyadamna.
+                    </p>
+                    <p style="line-height: 1.8; text-align: justify; font-size: 1.05rem; margin-top: 1rem;">
+                        Social media sirrii ta'een fayyadamuun carraa guddaa kenna, garuu of eeggannoo fi beekumsa barbaachisa. Fuula kana irratti social media adda addaa, akkamitti fayyadamuu fi bulchuu akka dandeessan, faayidaa fi rakkoo isaa, akkasumas nageenya keessan akkamitti eeguu akka dandeessan bal'inaan ni barsiifna.
+                    </p>
+                </section>
+
+                <!-- What is Social Media Management -->
+                <!-- What is Social Media Management -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;"> Social Media Management Maal Jechuu Dha?</h2>
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                            <strong>Social Media Management</strong> jechuun account social media keessan bulchuu, qabiyyee uumuu fi maxxansuu, hirmaattota waliin walqunnamuu, fi bu'aa hojii keessanii madaaluu jechuudha. Kun dhuunfaa ta'uu danda'a (account mataa keessanii bulchuuf) ykn daldalaa (biizinasii ykn dhaabbata tokkoof).
+                        </p>
+                        
+                        <h3 style="color: #2563eb; margin: 1.5rem 0 1rem;">Hojiiwwan Ijoo Social Media Management:</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                                <h4 style="color: #0284c7; margin-bottom: 0.5rem;">📝 Qabiyyee Uumuu (Content Creation)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Suuraa, viidiyoo, barreeffama fi qabiyyee biroo kan namoota hawwatu uumuu fi qopheessuu.</p>
+                            </div>
+                            
+                            <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+                                <h4 style="color: #059669; margin-bottom: 0.5rem;">📅 Sagantaa Qabiyyee (Content Scheduling)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Yeroo gaarii fi guyyaa gaarii posts keessan maxxansuuf karoorfachuu fi sagantaa baasuu.</p>
+                            </div>
+                            
+                            <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                                <h4 style="color: #d97706; margin-bottom: 0.5rem;"> Hirmaattota Waliin Walqunnamuu (Engagement)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Comments, messages fi mentions deebisuu, hirmaattota waliin haasawuu.</p>
+                            </div>
+                            
+                            <div style="background: #fdf2f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
+                                <h4 style="color: #db2777; margin-bottom: 0.5rem;">📚 Bu'aa Madaaluu (Analytics)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Lakkoofsa followers, likes, shares fi engagement madaaluu fi xiinxaluu.</p>
+                            </div>
+                            
+                            <div style="background: #ede9fe; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                                <h4 style="color: #7c3aed; margin-bottom: 0.5rem;"> Tooftaa Karoorfachuu (Strategy Planning)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Galma keessan galmaan ga'uuf tooftaa fi karoora uumuu.</p>
+                            </div>
+                            
+                            <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ef4444;">
+                                <h4 style="color: #dc2626; margin-bottom: 0.5rem;">🛡️ Maqaa Eeguu (Reputation Management)</h4>
+                                <p style="color: #374151; font-size: 0.95rem;">Yaada gaarii fi maqaa gaarii social media irratti eeguu fi guddisuu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detailed Platform Information -->
+                <section style="margin-bottom: 3rem;">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;"> Social Media Platforms Bal'inaan Hubachuu</h2>
+                    
+                    <!-- Facebook Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #1877f2;">
+                        <h3 style="color: #1877f2; margin-bottom: 1rem;">📘 Facebook - Miidiyaa Hawaasummaa Guddaa Addunyaa</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            Facebook miidiyaa hawaasummaa guddaa fi beekamaa addunyaa irratti argamu dha. Namoota biliyoona 3 ol fayyadaman qaba. Facebook irratti profile uumuu, hiriyyoota waliin quunnamuu, suuraa fi viidiyoo qoodachuu, groups keessa seenuu fi daldala hojjechuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #1877f2; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo Facebook:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Profile Uumuu:</strong> Odeeffannoo dhuunfaa keessan, suuraa profile fi cover photo dabaluu</li>
+                            <li><strong>Posts Share Gochuu:</strong> Yaada, suuraa, viidiyoo fi qabiyyee biroo hiriyyoota keessan waliin qoodachuu</li>
+                            <li><strong>Hiriyyoota Argachuu:</strong> Namoota beektan barbaaduun friend request erguu</li>
+                            <li><strong>Groups Fayyadamuu:</strong> Garee fedhii keessan waliin walsimu keessa seenuu ykn uumuu</li>
+                            <li><strong>Pages Uumuu:</strong> Biizinasii, dhaabbata ykn brand keessaniif fuula uumuu</li>
+                            <li><strong>Marketplace:</strong> Meeshaalee bitachuu fi gurguruu</li>
+                            <li><strong>Facebook Live:</strong> Viidiyoo kallattiin (live) dhiheessuu</li>
+                            <li><strong>Stories:</strong> Qabiyyee sa'aatii 24 booda badu maxxansuu</li>
+                        </ul>
+                        <div style="background: #e7f3ff; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #1877f2; font-weight: 600; margin: 0;"> Gorsa: Privacy settings keessan yeroo hunda check godhaa fi eenyutu posts keessan arguu akka danda'u control godhaa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #e4405f;">
+                        <h3 style="color: #e4405f; margin-bottom: 1rem;">📷 Instagram - Suuraa fi Viidiyoo Share Gochuu</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            Instagram miidiyaa hawaasummaa suuraa fi viidiyoo irratti xiyyeeffate dha. Suuraa bareedaa, viidiyoo gabaabaa fi qabiyyee creative share gochuuf gaarii dha. Instagram Stories, Reels fi IGTV fayyadamuun qabiyyee adda addaa dhiheessuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #e4405f; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo Instagram:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Profile Setup:</strong> Username, bio, profile picture fi website link dabaluu</li>
+                            <li><strong>Posts:</strong> Suuraa fi viidiyoo filters fi editing tools fayyadamuun maxxansuu</li>
+                            <li><strong>Stories:</strong> Qabiyyee sa'aatii 24 booda badu, polls, questions fi stickers waliin</li>
+                            <li><strong>Reels:</strong> Viidiyoo gabaabaa (hanga daqiiqaa 90) music fi effects waliin uumuu</li>
+                            <li><strong>Hashtags:</strong> Posts keessan namoota baay'eetu akka argan gochuuf hashtags fayyadamuu</li>
+                            <li><strong>Instagram Shopping:</strong> Meeshaalee kallattiin Instagram irratti gurguruu</li>
+                            <li><strong>Direct Messages:</strong> Ergaa dhuunfaa erguu fi argachuu</li>
+                            <li><strong>Explore Page:</strong> Qabiyyee haaraa fi trending argachuu</li>
+                        </ul>
+                        <div style="background: #ffe7ef; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #e4405f; font-weight: 600; margin: 0;"> Gorsa: Hashtags sirrii ta'an fayyadamaa (10-15 hashtags gaarii dha) fi yeroo gaarii posts maxxansaa (ganama 8-9 ykn galgala 7-9).</p>
+                        </div>
+                    </div>
+
+                    <!-- Twitter/X Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #1da1f2;">
+                        <h3 style="color: #1da1f2; margin-bottom: 1rem;">🐦 Twitter/X - Oduu fi Yaada Saffisaan Share Gochuu</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            Twitter (amma X jedhamee waamamu) miidiyaa hawaasummaa yaada gabaabaa (tweets) share gochuuf fayyadamu dha. Oduu, yaada fi qabiyyee gabaabaa saffisaan qoodachuuf gaarii dha. Trending topics hordofuu fi haasawa addunyaa irratti hirmaachuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #1da1f2; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo Twitter/X:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Tweets:</strong> Barreeffama hanga qubee 280, suuraa, viidiyoo fi GIFs maxxansuu</li>
+                            <li><strong>Retweets:</strong> Tweets namoota biroo followers keessaniif share gochuu</li>
+                            <li><strong>Likes fi Comments:</strong> Tweets namoota biroo like gochuu fi deebii kennuu</li>
+                            <li><strong>Trending Topics:</strong> Mata dureewwan yeroo ammaa trending ta'an hordofuu</li>
+                            <li><strong>Hashtags:</strong> Hashtags fayyadamuun haasawa tokko keessa seenuu</li>
+                            <li><strong>Twitter Spaces:</strong> Haasawa sagalee (audio chat) kallattiin gaggeessuu</li>
+                            <li><strong>Lists:</strong> Accounts adda addaa garee keessa galchuun organize gochuu</li>
+                            <li><strong>Bookmarks:</strong> Tweets barbaachisoo ta'an save gochuu</li>
+                        </ul>
+                        <div style="background: #e8f5fe; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #1da1f2; font-weight: 600; margin: 0;"> Gorsa: Tweets keessan gabaabaa fi qulqulluu ta'an barreessaa. Hashtags 1-2 qofa fayyadamaa fi yeroo hunda namoota biroo waliin walqunnamaa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Telegram Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #0088cc;">
+                        <h3 style="color: #0088cc; margin-bottom: 1rem;">✈️ Telegram - Ergaa Nageenya Qabu Erguu</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            Telegram app ergaa (messaging) nageenya fi saffisa irratti xiyyeeffate dha. Ergaa dhuunfaa, channels fi groups fayyadamuun namoota baay'ee waliin quunnamuu ni dandeessu. Faayilii guddaa (hanga 2GB) erguu fi bots fayyadamuun hojiiwwan adda addaa raawwachuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #0088cc; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo Telegram:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Chats:</strong> Ergaa dhuunfaa ykn garee keessatti erguu, suuraa, viidiyoo fi faayilii dabaluun</li>
+                            <li><strong>Channels:</strong> Channel uumuun odeeffannoo namoota baay'eef erguu (subscribers unlimited)</li>
+                            <li><strong>Groups:</strong> Garee hanga nama 200,000 uumuu fi bulchuu</li>
+                            <li><strong>Secret Chats:</strong> Ergaa encryption qabu fi yeroo booda ofumaan badu erguu</li>
+                            <li><strong>Bots:</strong> Bots fayyadamuun hojiiwwan automatic raawwachuu (polls, reminders, etc.)</li>
+                            <li><strong>File Sharing:</strong> Faayilii hanga 2GB erguu (documents, videos, audio, etc.)</li>
+                            <li><strong>Voice/Video Calls:</strong> Bilbila sagalee fi viidiyoo nageenya qabu taasisuu</li>
+                            <li><strong>Stickers fi GIFs:</strong> Stickers custom fi GIFs fayyadamuu</li>
+                        </ul>
+                        <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #0088cc; font-weight: 600; margin: 0;"> Gorsa: Telegram nageenya guddaa kenna. Secret chats fayyadamaa fi two-step verification enable godhaa.</p>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #ff0000;">
+                        <h3 style="color: #ff0000; margin-bottom: 1rem;">📺 YouTube - Viidiyoo Upload fi Channel Bulchuu</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            YouTube platform viidiyoo guddaa addunyaa irratti argamu dha. Viidiyoo upload gochuu, channel uumuu fi namoota biliyoonaan lakkaa'aman bira ga'uu ni dandeessu. Barnoota, bashannana, music fi qabiyyee biroo argachuu fi dhiheessuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #ff0000; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo YouTube:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Channel Uumuu:</strong> Channel dhuunfaa ykn biizinasii uumuu fi customize gochuu</li>
+                            <li><strong>Videos Upload:</strong> Viidiyoo upload gochuu, title, description fi tags dabaluu</li>
+                            <li><strong>Thumbnails:</strong> Thumbnail bareedaa uumuun views dabaluu</li>
+                            <li><strong>Playlists:</strong> Viidiyoo walitti qabee playlists uumuu</li>
+                            <li><strong>YouTube Studio:</strong> Analytics ilaaluu fi channel manage gochuu</li>
+                            <li><strong>Monetization:</strong> Ads fayyadamuun maallaqa argachuu (1000 subscribers fi 4000 watch hours erga qabaattee)</li>
+                            <li><strong>Live Streaming:</strong> Viidiyoo kallattiin (live) dhiheessuu</li>
+                            <li><strong>Community Tab:</strong> Subscribers waliin posts, polls fi updates share gochuu</li>
+                        </ul>
+                        <div style="background: #ffebee; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #ff0000; font-weight: 600; margin: 0;"> Gorsa: Qabiyyee quality qabu yeroo hunda upload godhaa. SEO (title, description, tags) sirrii ta'e fayyadamaa fi viewers waliin comments keessatti walqunnamaa.</p>
+                        </div>
+                    </div>
+
+                    <!-- TikTok Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #000000;">
+                        <h3 style="color: #000000; margin-bottom: 1rem;">🎵 TikTok - Viidiyoo Gabaabaa fi Viral</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            TikTok app viidiyoo gabaabaa (15 sekoondii hanga daqiiqaa 10) uumuu fi share gochuuf fayyadamu dha. Music, effects fi filters fayyadamuun qabiyyee creative uumuu ni dandeessu. Algorithm TikTok humna guddaa qaba - viidiyoo keessan saffisaan viral ta'uu danda'a.
+                        </p>
+                        <h4 style="color: #000000; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo TikTok:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Videos Uumuu:</strong> Viidiyoo gabaabaa record gochuu ykn upload gochuu</li>
+                            <li><strong>Effects fi Filters:</strong> Effects fi filters baay'ee fayyadamuun viidiyoo bareedaa uumuu</li>
+                            <li><strong>Sounds:</strong> Music fi sounds trending fayyadamuu</li>
+                            <li><strong>Duets fi Stitch:</strong> Viidiyoo namoota biroo waliin collaborate gochuu</li>
+                            <li><strong>Hashtags fi Challenges:</strong> Hashtags trending fi challenges keessa hirmaachuu</li>
+                            <li><strong>For You Page (FYP):</strong> Algorithm TikTok hubachuun FYP irratti mul'achuu</li>
+                            <li><strong>Live Streaming:</strong> Followers 1000 erga qabaattee live dhaquu</li>
+                            <li><strong>TikTok Shop:</strong> Meeshaalee kallattiin TikTok irratti gurguruu</li>
+                        </ul>
+                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="color: #000000; font-weight: 600; margin: 0;"> Gorsa: Qabiyyee trending fi creative uumaa. Sounds trending fayyadamaa fi yeroo hunda (guyyaa keessatti al tokko) post godhaa. Engagement keessan dabaluuf comments deebisaa.</p>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #0077b5;">
+                        <h3 style="color: #0077b5; margin-bottom: 1rem;">💼 LinkedIn - Professional Networking</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            LinkedIn miidiyaa hawaasummaa professional fi hojii barbaacha irratti xiyyeeffate dha. Profile professional uumuu, hojii barbaacha, network professional ijaaruu fi beekumsa hojii irratti argachuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #0077b5; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo LinkedIn:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Profile Professional:</strong> CV online uumuu, muuxannoo hojii fi barnoota dabaluu</li>
+                            <li><strong>Networking:</strong> Professionals biroo waliin quunnamuu fi network ijaaruu</li>
+                            <li><strong>Job Search:</strong> Hojii barbaacha fi apply gochuu</li>
+                            <li><strong>Posts fi Articles:</strong> Qabiyyee professional share gochuu fi articles barreessuu</li>
+                            <li><strong>Recommendations:</strong> Recommendations hiriyyoota hojii irraa argachuu fi kennuu</li>
+                            <li><strong>LinkedIn Learning:</strong> Courses online fayyadamuun skills haaraa barachuu</li>
+                        </ul>
+                    </div>
+
+                    <!-- WhatsApp Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #25d366;">
+                        <h3 style="color: #25d366; margin-bottom: 1rem;">💬 WhatsApp - Ergaa fi Bilbila</h3>
+                        <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1rem;">
+                            WhatsApp app ergaa fi bilbila beekamaa addunyaa irratti argamu dha. Ergaa, suuraa, viidiyoo fi faayilii erguu, bilbila sagalee fi viidiyoo taasisuu ni dandeessu. WhatsApp Business fayyadamuun daldala keessan customers waliin quunnamsiisuu ni dandeessu.
+                        </p>
+                        <h4 style="color: #25d366; margin: 1rem 0 0.5rem;">Hojiiwwan Ijoo WhatsApp:</h4>
+                        <ul style="color: #374151; line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Messages:</strong> Ergaa dhuunfaa fi garee keessatti erguu</li>
+                            <li><strong>Voice/Video Calls:</strong> Bilbila sagalee fi viidiyoo bilisaa taasisuu</li>
+                            <li><strong>Status:</strong> Suuraa fi viidiyoo sa'aatii 24 booda badu share gochuu</li>
+                            <li><strong>Groups:</strong> Garee hanga nama 1024 uumuu</li>
+                            <li><strong>WhatsApp Business:</strong> Biizinasii keessaniif profile professional uumuu</li>
+                            <li><strong>End-to-End Encryption:</strong> Ergaa keessan guutummaatti nageenya qabu</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">?🛠️ Meeshaalee Social Media Management</h2>
+                    <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                        Social media accounts baay'ee bulchuun yeroo baay'ee fudhata. Meeshaalee (tools) social media management fayyadamuun hojii keessan salpheessuu fi yeroo qusachuu ni dandeessu. Meeshaaleen kun posts schedule gochuu, analytics ilaaluu fi accounts hedduu bakka tokko irraa bulchuu isin gargaaru.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 12px; color: white;">
+                            <h3 style="color: white; margin-bottom: 1rem;">🛠️ Hootsuite</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Platform guddaa social media management. Accounts hedduu (Facebook, Twitter, Instagram, LinkedIn) bakka tokko irraa bulchuu, posts schedule gochuu fi analytics bal'aa argachuu ni dandeessu.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Multiple accounts manage gochuu</li>
+                                <li>Posts schedule fi auto-post</li>
+                                <li>Team collaboration</li>
+                                <li>Detailed analytics fi reports</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 12px; color: white;">
+                            <h3 style="color: white; margin-bottom: 1rem;">📚 Buffer</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Tool salphaa fi fayyadamuu salphaa posts schedule gochuuf. Qabiyyee keessan yeroo gaarii irratti automatic post ta'uuf sagantaa baasuu ni dandeessu.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Simple interface</li>
+                                <li>Queue system gaarii</li>
+                                <li>Browser extension</li>
+                                <li>Analytics basic</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 12px; color: white;">
+                            <h3 style="color: white; margin-bottom: 1rem;">🎨 Canva</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Tool design gaarii qabiyyee bareedaa social media uumuuf. Templates baay'ee, suuraa, fonts fi elements design fayyadamuun posts attractive uumuu ni dandeessu.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Templates social media</li>
+                                <li>Drag-and-drop editor</li>
+                                <li>Stock photos fi elements</li>
+                                <li>Brand kit (colors, logos, fonts)</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 1.5rem; border-radius: 12px; color: white;">
+                            <h3 style="color: white; margin-bottom: 1rem;">🌱 Sprout Social</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Platform comprehensive social media management fi analytics. Biizinasii guddaaf gaarii dha, features advanced fi team collaboration qaba.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Advanced analytics fi reporting</li>
+                                <li>Social listening</li>
+                                <li>CRM integration</li>
+                                <li>Team workflow management</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 1.5rem; border-radius: 12px; color: #1e293b;">
+                            <h3 style="color: #1e293b; margin-bottom: 1rem;">📅 Later</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Tool Instagram fi visual content schedule gochuuf gaarii. Visual planner qaba, posts keessan akkamitti mul'atan dursitee ilaaluu ni dandeessu.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Visual content calendar</li>
+                                <li>Instagram focus</li>
+                                <li>Hashtag suggestions</li>
+                                <li>User-generated content</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 1.5rem; border-radius: 12px; color: #1e293b;">
+                            <h3 style="color: #1e293b; margin-bottom: 1rem;">📊 Google Analytics</h3>
+                            <p style="line-height: 1.6; font-size: 0.95rem;">
+                                Tool analytics guddaa traffic website keessanii social media irraa dhufu madaaluuf. ROI social media keessanii hubachuuf barbaachisaa dha.
+                            </p>
+                            <ul style="margin-top: 1rem; line-height: 1.6; font-size: 0.9rem;">
+                                <li>Traffic source tracking</li>
+                                <li>Conversion tracking</li>
+                                <li>Audience insights</li>
+                                <li>Custom reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Social Media Strategy Section -->
+                <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;"> Tooftaa Social Media Milkaa'aa</h2>
+                    <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                        Social media milkaa'inaan fayyadamuuf tooftaa (strategy) sirrii ta'e barbaachisa. Tooftaan keessan galma keessan galmaan ga'uuf karaa ifa ta'e isinii kenna. Armaan gaditti tartiibota tooftaa social media uumuuf:
+                    </p>
+                    
+                    <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                        <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                            <h3 style="color: #0284c7; margin-bottom: 0.8rem;">1️⃣ Galma Keessan Murteessaa (Set Your Goals)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Maal galmaan ga'uu barbaaddu? Brand awareness dabaluu? Followers dabaluu? Sales dabaluu? Website traffic dabaluu? Galma keessan ifa ta'ee fi madaaluu danda'u ta'uu qaba (SMART goals: Specific, Measurable, Achievable, Relevant, Time-bound).
+                            </p>
+                        </div>
+                        
+                        <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+                            <h3 style="color: #059669; margin-bottom: 0.8rem;">2️⃣ Audience Keessan Beekaa (Know Your Audience)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Eenyutu posts keessan arguu qaba? Umriin isaanii meeqa? Bakka kamii jiraatu? Fedhii fi rakkoo isaanii maal fa'a? Audience keessan sirriitti hubachuun qabiyyee isaaniif barbaachisu uumuu isin gargaara.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <h3 style="color: #d97706; margin-bottom: 0.8rem;">3️⃣ Platform Sirrii Ta'e Filadhaa (Choose Right Platforms)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Platform hunda irratti ta'uu hin qabdan. Audience keessan bakka kamii akka jiran beekaa fi platforms sana irratti xiyyeeffadhaa. Fakkeenyaaf: Dargaggoonni TikTok fi Instagram irratti baay'ee jiru, professionals LinkedIn irratti.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #fdf2f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
+                            <h3 style="color: #db2777; margin-bottom: 0.8rem;">4📝 Qabiyyee Quality Qabu Uumaa (Create Quality Content)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Qabiyyeen keessan value kenna, barsiisa, bashannansiisa ykn inspire godha. Qabiyyee adda addaa (suuraa, viidiyoo, infographics, blogs) walitti makuun gaarii dha. Consistency barbaachisaa dha - sagantaa regular posts maxxansuuf qabaadhaa.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #ede9fe; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                            <h3 style="color: #7c3aed; margin-bottom: 0.8rem;">5 Hirmaattota Waliin Walqunnamaa (Engage with Audience)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Social media haasawa lama cinaa (two-way conversation) dha. Comments deebisaa, gaaffii deebisaa, feedback fudhachuu fi hirmaattota keessan waliin walqunnamaa. Kun community jabaa ijaaruuf gargaara.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ef4444;">
+                            <h3 style="color: #dc2626; margin-bottom: 0.8rem;">6📚 Bu'aa Madaalaa fi Xiinxalaa (Measure and Analyze)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                Analytics fayyadamuun bu'aa hojii keessanii madaalaa. Maaltu hojjechaa jira? Maaltu hin hojjenne? Daataa kana fayyadamuun tooftaa keessan fooyya'aa. Metrics ijoo: reach, engagement rate, click-through rate, conversions.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Content Calendar Section -->
+                <section style="margin-top: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white;">
+                    <h2 style="color: white; text-align: center; margin-bottom: 2rem;">📅 Content Calendar - Sagantaa Qabiyyee</h2>
+                    <p style="line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                        Content calendar sagantaa posts keessanii yeroo dheeraa (ji'a tokko, torban tokko) karoorfachuuf fayyadamtan dha. Kun consistency keessaniif gargaara fi yeroo qusachuu isin dandeessisa.
+                    </p>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                        <h3 style="color: white; margin-bottom: 1rem;">Content Calendar Keessatti Waan Dabaluu Qabdan:</h3>
+                        <ul style="line-height: 1.8; margin-left: 1.5rem;">
+                            <li><strong>Guyyaa fi Yeroo:</strong> Posts keessan yeroo kamii maxxansuu akka qabdan</li>
+                            <li><strong>Platform:</strong> Bakka kamii post gochuu akka qabdan (Facebook, Instagram, etc.)</li>
+                            <li><strong>Qabiyyee Type:</strong> Suuraa, viidiyoo, blog post, etc.</li>
+                            <li><strong>Caption/Text:</strong> Barreeffama post keessanii</li>
+                            <li><strong>Hashtags:</strong> Hashtags fayyadamuu qabdan</li>
+                            <li><strong>Links:</strong> Links dabaluu qabdan yoo jiraatan</li>
+                            <li><strong>Status:</strong> Draft, Scheduled, Published</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                        <h3 style="color: white; margin-bottom: 1rem;">⏰ Yeroo Gaarii Posts Maxxansuuf:</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 6px;">
+                                <strong>Facebook:</strong><br/>
+                                Wiixata-Kibxata: 1-4 PM<br/>
+                                Gaarii: Wiixata, Roobii
+                            </div>
+                            <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 6px;">
+                                <strong>Instagram:</strong><br/>
+                                Ganama: 8-9 AM<br/>
+                                Galgala: 7-9 PM
+                            </div>
+                            <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 6px;">
+                                <strong>Twitter:</strong><br/>
+                                Ganama: 8-10 AM<br/>
+                                Galgala: 6-9 PM
+                            </div>
+                            <div style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 6px;">
+                                <strong>LinkedIn:</strong><br/>
+                                Wiixata-Kibxata: 7-8 AM<br/>
+                                Galgala: 5-6 PM
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; font-style: italic;">
+                            💡 Yaadannoo: Yeroon kun general dha. Audience keessan analytics fayyadamuun yeroo isaaniif gaarii ta'e argadhaa.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Safety and Security Section -->
+                <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">? Social Media Nagaan Fayyadamuu</h2>
+                    <p style="color: #374151; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                        Social media fayyadamuu yeroo, of eeggannoo fi nageenya keessan dursa kennuu qabdu. Odeeffannoo dhuunfaa keessan hin qoodin, password jabaa fayyadamaa fi posts keessan yeroo hunda yaadaa. Social media faayidaa guddaa qaba garuu haala gaarii hin taaneen fayyadamuu rakkoo fiduu danda'a.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ef4444;">
+                            <h3 style="color: #dc2626; margin-bottom: 0.8rem;">🔐 Password Jabaa Fayyadamaa</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>Qubee guddaa fi xixiqqaa walitti makaa</li>
+                                <li>Lakkoofsota fi mallattoolee special dabalaa</li>
+                                <li>Hanga qubee 12 ykn isaa ol fayyadamaa</li>
+                                <li>Password account hundaaf adda ta'e fayyadamaa</li>
+                                <li>Password manager fayyadamuu yaadaa</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #fffbeb; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <h3 style="color: #d97706; margin-bottom: 0.8rem;">🔒 Two-Factor Authentication (2FA)</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>2FA accounts hunda irratti enable godhaa</li>
+                                <li>SMS ykn authenticator app fayyadamaa</li>
+                                <li>Backup codes save godhaa</li>
+                                <li>Login attempts suspicious check godhaa</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                            <h3 style="color: #0284c7; margin-bottom: 0.8rem;"> Privacy Settings</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>Privacy settings yeroo hunda review godhaa</li>
+                                <li>Eenyutu posts keessan arguu akka danda'u control godhaa</li>
+                                <li>Location sharing off godhaa</li>
+                                <li>Profile keessan public ykn private ta'uu murteessaa</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+                            <h3 style="color: #059669; margin-bottom: 0.8rem;">🛡️ Odeeffannoo Dhuunfaa Hin Qoodin</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>Lakkoofsa bilbilaa hin qoodin</li>
+                                <li>Teessoo mana keessanii hin qoodin</li>
+                                <li>Odeeffannoo baankii hin qoodin</li>
+                                <li>Lakkoofsa ID ykn passport hin qoodin</li>
+                                <li>Yeroo deemtan (vacation) posts hin godhiin</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #fdf2f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
+                            <h3 style="color: #db2777; margin-bottom: 0.8rem;">⚠️ Phishing fi Scams Irraa Of Eegaa</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>Links suspicious hin cuqaasin</li>
+                                <li>Messages namoota hin beekne irraa of eeggadhaa</li>
+                                <li>Offers "too good to be true" hin amanin</li>
+                                <li>Accounts verified (blue checkmark) check godhaa</li>
+                                <li>Password keessan namatti hin kenninaa</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #ede9fe; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                            <h3 style="color: #7c3aed; margin-bottom: 0.8rem;">💚 Digital Wellbeing</h3>
+                            <ul style="color: #374151; line-height: 1.7; font-size: 0.95rem; margin-left: 1rem;">
+                                <li>Yeroo social media irratti dabarsitan limit godhaa</li>
+                                <li>Screen time tracking fayyadamaa</li>
+                                <li>Notifications unnecessary off godhaa</li>
+                                <li>Social media detox yeroo yeroon godhaa</li>
+                                <li>Mental health keessan dursa kennaa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 2rem; border-radius: 12px; color: white; margin-top: 2rem;">
+                        <h3 style="color: white; text-align: center; margin-bottom: 1rem;"> Mallattoolee Hacking fi Maal Gochuu Qabdu</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                            <div>
+                                <h4 style="color: #fbbf24; margin-bottom: 0.5rem;">Mallattoolee:</h4>
+                                <ul style="line-height: 1.7; font-size: 0.95rem;">
+                                    <li>Posts hin barreessine mul'atu</li>
+                                    <li>Messages hin ergine ergamaniiru</li>
+                                    <li>Password hin hojjenne</li>
+                                    <li>Login attempts suspicious</li>
+                                    <li>Friends haaraa hin dabalatin dabalamaniiru</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="color: #fbbf24; margin-bottom: 0.5rem;">Maal Gochuu Qabdu:</h4>
+                                <ul style="line-height: 1.7; font-size: 0.95rem;">
+                                    <li>Password battalumatti jijjiiraa</li>
+                                    <li>Account report godhaa</li>
+                                    <li>Hiriyyoota keessan beeksisaa</li>
+                                    <li>Devices hunda logout godhaa</li>
+                                    <li>Support team platform sanaa quunnamaa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="margin-top: 3rem;">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;"> Gorsaa fi Tips Social Media Milkaa'aa</h2>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;"> Nageenya (Security)</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Password jabaa fi unique ta'e fayyadamaa</li>
+                                    <li>Two-factor authentication enable godhaa</li>
+                                    <li>Odeeffannoo dhuunfaa hin qoodin</li>
+                                    <li>Privacy settings yeroo hunda check godhaa</li>
+                                    <li>Suspicious links hin cuqaasin</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;">📝 Qabiyyee (Content)</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Qabiyyee quality qabu fi value kennu uumaa</li>
+                                    <li>Qabiyyee adda addaa (suuraa, viidiyoo, text) walitti makaa</li>
+                                    <li>Consistency qabaadhaa - sagantaa regular posts</li>
+                                    <li>Hashtags sirrii ta'an fayyadamaa</li>
+                                    <li>Captions engaging fi clear barreessaa</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;"> Engagement</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Comments fi messages saffisaan deebisaa</li>
+                                    <li>Gaaffii gaafadhaa fi polls fayyadamaa</li>
+                                    <li>Followers keessan waliin walqunnamaa</li>
+                                    <li>User-generated content share godhaa</li>
+                                    <li>Community ijaaruu irratti xiyyeeffadhaa</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;"> Analytics</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Bu'aa keessan yeroo hunda madaalaa</li>
+                                    <li>Maaltu hojjechaa jira xiinxalaa</li>
+                                    <li>Tooftaa keessan daataa irratti hundaa'uun fooyya'aa</li>
+                                    <li>Yeroo gaarii posts maxxansuuf argadhaa</li>
+                                    <li>ROI (Return on Investment) madaalaa</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;"> Branding</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Brand identity consistent qabaadhaa</li>
+                                    <li>Colors, fonts fi style consistent fayyadamaa</li>
+                                    <li>Voice fi tone brand keessanii eegaa</li>
+                                    <li>Logo fi watermark fayyadamaa</li>
+                                    <li>Professional fi authentic ta'aa</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 style="color: #fbbf24; margin-bottom: 1rem;"> Balance</h3>
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>Yeroo social media irratti dabarsitan control godhaa</li>
+                                    <li>Mental health keessan dursa kennaa</li>
+                                    <li>Social media detox yeroo yeroon godhaa</li>
+                                    <li>Qabiyyee positive fi constructive share godhaa</li>
+                                    <li>Cyberbullying irraa of eegaa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Common Mistakes Section -->
+                <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">? Dogongorri Yeroo Baay'ee Mul'atan fi Akkamitti Of Eeggachuu</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ef4444;">
+                            <h3 style="color: #dc2626; margin-bottom: 0.8rem;">? Posts Baay'ee Maxxansuu (Over-posting)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                <strong>Rakkoo:</strong> Guyyaa keessatti posts baay'ee maxxansuun followers keessan annoyed godha.<br/>
+                                <strong>Furmaata:</strong> Guyyaa keessatti posts 1-3 qofa maxxansaa. Quality over quantity.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #fffbeb; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <h3 style="color: #d97706; margin-bottom: 0.8rem;">? Engagement Hin Goone (Ignoring Engagement)</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                <strong>Rakkoo:</strong> Comments fi messages deebisuu dhiisuu followers keessan discourage godha.<br/>
+                                <strong>Furmaata:</strong> Comments fi messages saffisaan deebisaa. Hirmaattota keessan akka value qaban godha.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                            <h3 style="color: #0284c7; margin-bottom: 0.8rem;">? Qabiyyee Namoota Biroo Copy Gochuu</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                <strong>Rakkoo:</strong> Qabiyyee namoota biroo copy gochuun copyright issues fi credibility loss fida.<br/>
+                                <strong>Furmaata:</strong> Qabiyyee original keessan uumaa. Yoo share gootan, credit kennaa.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+                            <h3 style="color: #059669; margin-bottom: 0.8rem;">? Hashtags Baay'ee Fayyadamuu</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                <strong>Rakkoo:</strong> Hashtags baay'ee (30+) fayyadamuun spammy fi unprofessional mul'ata.<br/>
+                                <strong>Furmaata:</strong> Hashtags relevant 5-10 qofa fayyadamaa. Quality over quantity.
+                            </p>
+                        </div>
+                        
+                        <div style="background: #fdf2f8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ec4899;">
+                            <h3 style="color: #db2777; margin-bottom: 0.8rem;">? Analytics Hin Ilaalin</h3>
+                            <p style="color: #374151; line-height: 1.7;">
+                                <strong>Rakkoo:</strong> Bu'aa keessan hin madaalin yoo taate, maaltu hojjechaa jira hin beektan.<br/>
+                                <strong>Furmaata:</strong> Analytics yeroo hunda check godhaa fi tooftaa keessan daataa irratti hundaa'uun fooyya'aa.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future Trends Section -->
+                <section style="margin-top: 3rem; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 2rem; border-radius: 12px; color: white;">
+                    <h2 style="color: white; text-align: center; margin-bottom: 2rem;"> Trends Haaraa Social Media</h2>
+                    <p style="line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
+                        Social media yeroo hunda jijjiiramaa jira. Trends haaraa hordofuun barbaachisaa dha. Armaan gaditti trends haaraa fi fuulduratti mul'achuu danda'an:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;"> Short-Form Video</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                TikTok, Instagram Reels, YouTube Shorts - viidiyoo gabaabaa baay'ee popular ta'aa jiru. Qabiyyee gabaabaa fi engaging uumuu barbaachisaa dha.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;">?📱 Social Commerce</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                Meeshaalee kallattiin social media irratti bitachuu fi gurguruu. Instagram Shopping, Facebook Marketplace, TikTok Shop guddachaa jiru.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;">🤖 AI fi Automation</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                AI fayyadamuun qabiyyee uumuu, chatbots, fi personalization. Automation tools social media management salpheessuuf fayyadamamu.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;"> Metaverse fi VR</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                Virtual reality fi metaverse social media fuulduratti gahee guddaa taphatu. Virtual events fi experiences haaraa.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;"> Micro-Influencers</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                Influencers xixiqqoo (10K-100K followers) engagement rate guddaa qabu. Brands micro-influencers waliin hojjechuu barbaadu.
+                            </p>
+                        </div>
+                        
+                        <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px;">
+                            <h3 style="color: #fbbf24; margin-bottom: 0.8rem;"> Audio Content</h3>
+                            <p style="line-height: 1.7; font-size: 0.95rem;">
+                                Podcasts, Twitter Spaces, Clubhouse - qabiyyee sagalee (audio) guddachaa jira. Voice-based social media platforms haaraa mul'achaa jiru.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final Call to Action -->
+                <section style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+                    <h2 style="color: #1e293b; margin-bottom: 1.5rem;"> Xumura</h2>
+                    <p style="color: #374151; line-height: 1.8; text-align: justify; max-width: 800px; margin: 0 auto 1.5rem;">
+                        Social media bara ammaa kana jireenya keenyaa keessatti gahee guddaa qaba. Sirrii ta'een fayyadamuun carraa guddaa kenna - hiriyyoota haaraa argachuu, beekumsa argachuu, daldala hojjechuu fi bashannanuuf. Garuu of eeggannoo fi beekumsa barbaachisa. Gorsaa fi tips fuula kana irratti kenname fayyadamuun social media milkaa'inaan fayyadamuu dandeessu.
+                    </p>
+                    <p style="color: #374151; line-height: 1.8; text-align: justify; max-width: 800px; margin: 0 auto 1.5rem;">
+                        Yaadannoo: Social media meeshaa dha - akkamitti fayyadamtan irratti hundaa'a. Qabiyyee positive share godhaa, namoota biroo respect godhaa, fi nageenya keessan yeroo hunda dursa kennaa. Social media milkaa'aa fi nageenya qabu isiniif hawwina!
+                    </p>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px;">
+                        <p style="color: white; font-size: 1.1rem; font-weight: 600; margin: 0;">
+                             Gaaffii yoo qabaattan ykn gargaarsa dabalataa barbaaddan, chatbot keenyaan quunnamaa!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa''ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook"></a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube"></a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram"></a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok"></a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                         Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../user-auth.js"></script>
+    <script src="../chatbot.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+            const userNavItem = document.getElementById('user-nav-item');
+            
+            if (currentUser) {
+                userNavItem.innerHTML = `
+                    <span style="color: #059669;">Baga nagaan dhufte, ${currentUser.fullname}!</span>
+                    <button id="user-logout-btn" style="background: #dc2626; color: white; border: none; padding: 4px 8px; border-radius: 4px; margin-left: 8px; cursor: pointer;">Logout</button>
+                `;
+                
+                document.getElementById('user-logout-btn').addEventListener('click', () => {
+                    if (window.userAuth) {
+                        window.userAuth.logout();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

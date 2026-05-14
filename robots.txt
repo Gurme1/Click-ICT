@@ -1,0 +1,23 @@
+# ClickICT robots.txt
+# Allow all search engines to crawl public pages
+
+User-agent: *
+Allow: /
+Allow: /system/kompitara.html
+Allow: /system/bilbila.html
+Allow: /system/teeknoloojii.html
+Allow: /system/ai.html
+Allow: /system/social-media.html
+Allow: /system/videos.html
+Allow: /system/gallery.html
+Allow: /system/about-developer.html
+Allow: /system/user-register.html
+Allow: /system/user-login.html
+
+# Block admin pages from search engines
+Disallow: /system/admin-login.html
+Disallow: /system/admin-dashboard.html
+Disallow: /system/preview.html
+
+# Sitemap location
+Sitemap: https://clickict.com/sitemap.xml

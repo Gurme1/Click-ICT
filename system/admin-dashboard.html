@@ -1,0 +1,810 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard">
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li><a href="admin-dashboard.html" class="active" style="color: #dc2626; font-weight: 600;">Admin Dashboard</a></li>
+                    <li>
+                        <div class="user-info" style="display: flex; align-items: center; gap: 8px;">
+                            <span id="admin-username" style="color: #059669; font-weight: 500;">Admin</span>
+                            <button id="logout-btn" style="background: #dc2626; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.9rem;">Logout</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;"></span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 70px;">
+        <section class="page-header">
+            <div class="container">
+                <h1>🎛️ Admin Dashboard</h1>
+                <p>Manage your ClickICT website content, posts, and settings</p>
+            </div>
+        </section>
+
+    <div class="admin-container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="posts">📝 Posts</button>
+            <button class="tab-btn" data-tab="books">📚 Book Seller</button>
+            <button class="tab-btn" data-tab="videos">📹 Videos</button>
+            <button class="tab-btn" data-tab="gallery">🖼️ Gallery</button>
+            <button class="tab-btn" data-tab="social">📱 Social Media</button>
+            <button class="tab-btn" data-tab="comments">💬 Comments</button>
+            <button class="tab-btn" data-tab="settings">⚙️ Settings</button>
+        </div>
+
+        <!-- Posts Management Tab -->
+        <div id="posts-tab" class="tab-content active">
+            <div class="admin-card">
+                <h2>Barreeffama Haaraa Dabaluu</h2>
+                <form id="post-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="post-title">Mata Duree:</label>
+                            <input type="text" id="post-title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-category">Category:</label>
+                            <select id="post-category" name="category" required>
+                                <option value="">Filadhu...</option>
+                                <option value="kompitara">Kompitara</option>
+                                <option value="bilbila">Bilbila</option>
+                                <option value="teeknoloojii">Teeknoloojii</option>
+                                <option value="seenaa">Seenaa & Siyaasa</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-group-full">
+                        <label for="post-subtitle">Mata Duree Xiqqaa:</label>
+                        <input type="text" id="post-subtitle" name="subtitle">
+                    </div>
+                    
+                    <div class="form-group form-group-full">
+                        <label for="post-content">Qabiyyee:</label>
+                        <textarea id="post-content" name="content" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="post-image">Suuraa upload:</label>
+                            <small style="color: #64748b; font-size: 0.8rem;">Images will be resized to YouTube banner size (2560x1440)</small>
+                            <input type="file" id="post-image" name="image" accept="image/*">
+                            <div id="image-preview" class="image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-video">Video URL:</label>
+                            <input type="url" id="post-video" name="video">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-group-full">
+                        <label for="post-link">Link URL:</label>
+                        <input type="url" id="post-link" name="link">
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">Publish</button>
+                        <button type="button" class="btn btn-warning" id="save-draft">Save as Draft</button>
+                        <button type="button" class="btn btn-secondary" id="preview-post">Preview</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="admin-card">
+                <h2>Barreeffamoota Jiran</h2>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Mata Duree</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Guyyaa</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="posts-list">
+                        <!-- Posts will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Book Seller Tab -->
+        <div id="books-tab" class="tab-content">
+            <div class="admin-card">
+                <h2 id="book-form-title">📚 Kitaaba Haaraa Dabaluu</h2>
+                <form id="book-form" class="admin-form">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-title">📖 Book Name (Maqaa Kitaabaa): *</label>
+                            <input type="text" id="book-title" name="title" required placeholder="e.g., Introduction to Computer Science">
+                        </div>
+                        <div class="form-group">
+                            <label for="book-author">✍️ Author (Barreessaa):</label>
+                            <input type="text" id="book-author" name="author" placeholder="e.g., Gurmessa Milki">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="book-description">📝 Description (Ibsa Kitaabaa): *</label>
+                        <textarea id="book-description" name="description" required
+                            placeholder="Kitaaba kana waa'ee ibsaa..." style="height:100px;"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-price-etb">💰 Price in ETB (Birr): *</label>
+                            <input type="number" id="book-price-etb" name="priceEtb" required min="0" step="0.01" placeholder="e.g., 250">
+                        </div>
+                        <div class="form-group">
+                            <label for="book-price-usd">💵 Price in USD (Dollar): *</label>
+                            <input type="number" id="book-price-usd" name="priceUsd" required min="0" step="0.01" placeholder="e.g., 4.99">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-category">🏷️ Category:</label>
+                            <select id="book-category" name="category" required>
+                                <option value="">Select category...</option>
+                                <option value="technology">💻 Technology</option>
+                                <option value="education">🎓 Education</option>
+                                <option value="business">💼 Business</option>
+                                <option value="religion">📖 Religion</option>
+                                <option value="fiction">📕 Fiction</option>
+                                <option value="other">📦 Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-stock">📦 Stock Status:</label>
+                            <select id="book-stock" name="stock">
+                                <option value="available">✅ Available</option>
+                                <option value="out_of_stock">❌ Out of Stock</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="book-contact">📞 Contact Info (Phone / Email for orders):</label>
+                        <input type="text" id="book-contact" name="contact" placeholder="e.g., +251912345678 or email@example.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🖼️ Cover Image / Banner (Suuraa Fuulaa):</label>
+                            <div class="book-upload-zone" id="cover-upload-zone" onclick="document.getElementById('book-cover').click()"
+                                style="border:2px dashed #cbd5e1; border-radius:12px; padding:1.5rem; text-align:center; cursor:pointer; transition:all 0.2s; background:#f8fafc; min-height:120px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;"
+                                onmouseover="this.style.borderColor='#2563eb'; this.style.background='#eff6ff';"
+                                onmouseout="this.style.borderColor='#cbd5e1'; this.style.background='#f8fafc';">
+                                <span style="font-size:2.5rem;">🖼️</span>
+                                <span style="font-weight:600; color:#374151; font-size:0.95rem;">Click to Upload Cover Image</span>
+                                <span style="color:#94a3b8; font-size:0.8rem;">JPG, PNG, WEBP — Book cover or banner</span>
+                                <button type="button" class="btn btn-primary" style="margin-top:4px; padding:8px 20px; font-size:0.85rem; pointer-events:none;">
+                                    📷 Choose Image
+                                </button>
+                            </div>
+                            <input type="file" id="book-cover" name="cover" accept="image/*" style="display:none;">
+                            <div id="cover-preview" style="margin-top:10px;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>📄 PDF File (Upload Book PDF):</label>
+                            <div class="book-upload-zone" id="pdf-upload-zone" onclick="document.getElementById('book-pdf').click()"
+                                style="border:2px dashed #cbd5e1; border-radius:12px; padding:1.5rem; text-align:center; cursor:pointer; transition:all 0.2s; background:#f8fafc; min-height:120px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;"
+                                onmouseover="this.style.borderColor='#059669'; this.style.background='#f0fdf4';"
+                                onmouseout="this.style.borderColor='#cbd5e1'; this.style.background='#f8fafc';">
+                                <span style="font-size:2.5rem;">📄</span>
+                                <span style="font-weight:600; color:#374151; font-size:0.95rem;">Click to Upload PDF</span>
+                                <span style="color:#94a3b8; font-size:0.8rem;">PDF format only — Book content</span>
+                                <button type="button" class="btn btn-success" style="margin-top:4px; padding:8px 20px; font-size:0.85rem; pointer-events:none;">
+                                    📄 Choose PDF
+                                </button>
+                            </div>
+                            <input type="file" id="book-pdf" name="pdf" accept=".pdf" style="display:none;">
+                            <div id="pdf-info" style="margin-top:10px; padding:8px 12px; background:#f0fdf4; border-radius:8px; border:1px solid #bbf7d0; display:none;">
+                                <span id="pdf-filename" style="color:#166534; font-size:0.85rem; font-weight:600;">📄 </span>
+                                <button type="button" onclick="clearPdf()" style="background:none; border:none; color:#dc2626; cursor:pointer; font-size:0.8rem; margin-left:8px;">✕ Remove</button>
+                            </div>
+                            <small style="color:#94a3b8; font-size:0.78rem; display:block; margin-top:6px;">Users can preview the PDF before buying</small>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">📚 Post Book</button>
+                        <button type="button" id="book-cancel-edit" class="btn btn-secondary"
+                            style="display:none;" onclick="window.bookSeller.cancelEdit()">✕ Cancel Edit</button>
+                        <button type="button" class="btn btn-warning" onclick="document.getElementById('book-form').reset(); document.getElementById('cover-preview').innerHTML=''; document.getElementById('pdf-filename').textContent='No file chosen';">🔄 Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Books List Table -->
+            <div class="admin-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+                    <h2 style="margin:0;">📚 Kitaabota Jiran</h2>
+                    <a href="book-seller.html" target="_blank" class="btn btn-info" style="font-size:0.85rem; padding:8px 16px; text-decoration:none;">
+                        🔗 View Public Store
+                    </a>
+                </div>
+                <div id="book-message-container"></div>
+                <div style="overflow-x:auto;">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Cover</th>
+                                <th>Book Name / Author</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>PDF</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="books-list">
+                            <tr><td colspan="7" style="text-align:center; color:#94a3b8; padding:2rem;">
+                                Kitaabni hin jiru. Kitaaba haaraa dabalaa!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pages Management Tab -->
+        <div id="pages-tab" class="tab-content">
+            <div class="admin-card">
+                <h2>Fuula Haaraa Dabaluu</h2>
+                <form id="page-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="page-title">Mata Duree Fuulaa:</label>
+                            <input type="text" id="page-title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="page-slug">URL Slug:</label>
+                            <input type="text" id="page-slug" name="slug" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-group-full">
+                        <label for="page-content">Qabiyyee Fuulaa:</label>
+                        <textarea id="page-content" name="content" required></textarea>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">Create Page</button>
+                        <button type="button" class="btn btn-secondary" id="preview-page">Preview</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Comments Management Tab -->
+        <div id="comments-tab" class="tab-content">
+            <div class="admin-card">
+                <h2>Yaadoota Bulchuu</h2>
+                <div style="margin-bottom: 1rem;">
+                    <button class="btn btn-secondary" onclick="adminDashboard.loadComments()">Refresh Comments</button>
+                    <select id="comment-filter" onchange="adminDashboard.filterComments()" style="margin-left: 1rem; padding: 8px; border: 1px solid #e5e7eb; border-radius: 4px;">
+                        <option value="all">All Comments</option>
+                        <option value="homepage">Homepage</option>
+                        <option value="registration">Registration</option>
+                        <option value="kompitara">Kompitara</option>
+                        <option value="bilbila">Bilbila</option>
+                        <option value="teeknoloojii">Teeknoloojii</option>
+                        <option value="seenaa">Seenaa</option>
+                    </select>
+                </div>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Miseensa</th>
+                            <th>Yaada</th>
+                            <th>Fuula</th>
+                            <th>Guyyaa</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comments-list">
+                        <!-- Comments will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Navigation Management Tab -->
+        <div id="navigation-tab" class="tab-content">
+            <div class="admin-card">
+                <h2> Navigation Menu Management</h2>
+                <p style="color: #64748b; margin-bottom: 1.5rem;">Add, edit, or remove navigation items from the main website menu</p>
+                
+                <!-- Add New Navigation Item -->
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <h3 style="margin-top: 0; color: #1e293b;">Add New Navigation Item</h3>
+                    <form id="nav-form" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nav-title">Menu Title:</label>
+                                <input type="text" id="nav-title" name="title" required placeholder="e.g., New Page">
+                            </div>
+                            <div class="form-group">
+                                <label for="nav-url">URL/Link:</label>
+                                <input type="text" id="nav-url" name="url" required placeholder="e.g., new-page.html">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nav-icon">Icon (optional):</label>
+                                <input type="text" id="nav-icon" name="icon" placeholder="e.g.,  or ??">
+                            </div>
+                            <div class="form-group">
+                                <label for="nav-position">Position:</label>
+                                <select id="nav-position" name="position" required>
+                                    <option value="">Select position...</option>
+                                    <option value="0">First (Home position)</option>
+                                    <option value="1">After Home</option>
+                                    <option value="2">After Kompitara</option>
+                                    <option value="3">After Bilbila</option>
+                                    <option value="4">After Teeknoloojii</option>
+                                    <option value="5">After AI</option>
+                                    <option value="6">After Social Media</option>
+                                    <option value="7">Before About Us</option>
+                                    <option value="last">Last position</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="nav-external" name="external" style="margin-right: 8px;">
+                                External link (opens in new tab)
+                            </label>
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-success">Add Navigation Item</button>
+                            <button type="button" class="btn btn-secondary" onclick="document.getElementById('nav-form').reset()">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Current Navigation Items -->
+                <div>
+                    <h3 style="color: #1e293b; margin-bottom: 1rem;">Current Navigation Menu</h3>
+                    <div id="current-navigation" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+                        <!-- Navigation items will be loaded here -->
+                    </div>
+                </div>
+                
+                <!-- Navigation Preview -->
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: #1e293b; margin-bottom: 1rem;">Navigation Preview</h3>
+                    <div id="nav-preview" style="background: #1e293b; padding: 1rem; border-radius: 8px; color: white;">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                            <!-- Preview will be generated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos Management Tab -->
+        <div id="videos-tab" class="tab-content">
+            <div class="admin-card">
+                <h2 id="video-form-title">📹 Video Haaraa Dabaluu</h2>
+                <form id="video-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="video-title">Mata Duree:</label>
+                            <input type="text" id="video-title" name="title" required placeholder="Video mata duree barreessaa...">
+                        </div>
+                        <div class="form-group">
+                            <label for="video-category">Category:</label>
+                            <select id="video-category" name="category" required>
+                                <option value="">Filadhu...</option>
+                                <option value="kompitara">💻 Kompitara</option>
+                                <option value="bilbila">📱 Bilbila</option>
+                                <option value="teeknoloojii">🌐 Teeknoloojii</option>
+                                <option value="ai">🤖 Barnoota AI</option>
+                                <option value="seenaa">📜 Seenaa & Siyaasa</option>
+                                <option value="other">📦 Kan Biroo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="video-subtitle">Mata Duree Xiqqaa:</label>
+                        <input type="text" id="video-subtitle" name="subtitle" placeholder="Ibsa gabaabaa...">
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="video-content">Qabiyyee:</label>
+                        <textarea id="video-content" name="content" required placeholder="Video waa'ee ibsaa bal'inaan barreessaa..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="video-thumbnail">Suuraa upload (Thumbnail):</label>
+                            <small style="color:#64748b; font-size:0.8rem;">Images will be resized to YouTube banner size (2560x1440)</small>
+                            <input type="file" id="video-thumbnail" name="thumbnail" accept="image/*">
+                            <div id="video-thumb-preview" class="image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="video-url">Video URL:</label>
+                            <input type="url" id="video-url" name="videoUrl" placeholder="https://youtube.com/watch?v=...">
+                            <small style="color:#64748b; font-size:0.8rem; display:block; margin-top:4px;">YouTube, Vimeo ykn video link kamiiyyuu</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="video-link">Link URL (Optional):</label>
+                        <input type="url" id="video-link" name="link" placeholder="https://...">
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">📹 Publish Video</button>
+                        <button type="button" id="video-cancel-edit" class="btn btn-secondary" style="display:none;" onclick="adminDashboard.cancelVideoEdit()">✕ Cancel Edit</button>
+                        <button type="button" class="btn btn-warning" onclick="document.getElementById('video-form').reset(); document.getElementById('video-thumb-preview').innerHTML='';">🔄 Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>📹 Videos Jiran</h2>
+                <div style="overflow-x:auto;">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Thumbnail</th>
+                                <th>Mata Duree</th>
+                                <th>Category</th>
+                                <th>Video URL</th>
+                                <th>Guyyaa</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="videos-list">
+                            <tr><td colspan="6" style="text-align:center; color:#94a3b8; padding:2rem;">Video hin jiru. Video haaraa dabalaa!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Management Tab -->
+        <div id="gallery-tab" class="tab-content">
+            <div class="admin-card">
+                <h2 id="gallery-form-title">🖼️ Suuraa Haaraa Dabaluu</h2>
+                <form id="gallery-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gallery-title">Mata Duree:</label>
+                            <input type="text" id="gallery-title" name="title" required placeholder="Suuraa mata duree barreessaa...">
+                        </div>
+                        <div class="form-group">
+                            <label for="gallery-category">Category:</label>
+                            <select id="gallery-category" name="category" required>
+                                <option value="">Filadhu...</option>
+                                <option value="kompitara">💻 Kompitara</option>
+                                <option value="bilbila">📱 Bilbila</option>
+                                <option value="teeknoloojii">🌐 Teeknoloojii</option>
+                                <option value="ai">🤖 Barnoota AI</option>
+                                <option value="event">🎉 Taatee</option>
+                                <option value="other">📦 Kan Biroo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="gallery-subtitle">Mata Duree Xiqqaa:</label>
+                        <input type="text" id="gallery-subtitle" name="subtitle" placeholder="Ibsa gabaabaa...">
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="gallery-content">Qabiyyee:</label>
+                        <textarea id="gallery-content" name="content" required placeholder="Suuraa kana waa'ee ibsaa..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gallery-image">Suuraa upload:</label>
+                            <small style="color:#64748b; font-size:0.8rem;">Images will be resized to YouTube banner size (2560x1440)</small>
+                            <input type="file" id="gallery-image" name="image" accept="image/*" required>
+                            <div id="gallery-image-preview" class="image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="gallery-video-url">Video URL (Optional):</label>
+                            <input type="url" id="gallery-video-url" name="videoUrl" placeholder="https://youtube.com/watch?v=...">
+                            <small style="color:#64748b; font-size:0.8rem; display:block; margin-top:4px;">Suuraa waliin video dabaluu dandeessa</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="gallery-link">Link URL (Optional):</label>
+                        <input type="url" id="gallery-link" name="link" placeholder="https://...">
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">🖼️ Publish Image</button>
+                        <button type="button" id="gallery-cancel-edit" class="btn btn-secondary" style="display:none;" onclick="adminDashboard.cancelGalleryEdit()">✕ Cancel Edit</button>
+                        <button type="button" class="btn btn-warning" onclick="document.getElementById('gallery-form').reset(); document.getElementById('gallery-image-preview').innerHTML='';">🔄 Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>🖼️ Gallery Jiru</h2>
+                <div id="gallery-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-top:1rem;">
+                    <div style="text-align:center; color:#94a3b8; padding:2rem; grid-column:1/-1;">Suuraan hin jiru. Suuraa haaraa dabalaa!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Management Tab -->
+        <div id="social-tab" class="tab-content">
+            <div class="admin-card">
+                <h2 id="social-form-title">📱 Social Media Post Haaraa</h2>
+                <form id="social-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="social-title">Mata Duree:</label>
+                            <input type="text" id="social-title" name="title" required placeholder="Post mata duree barreessaa...">
+                        </div>
+                        <div class="form-group">
+                            <label for="social-category">Category / Platform:</label>
+                            <select id="social-category" name="category" required>
+                                <option value="">Filadhu...</option>
+                                <option value="facebook">📘 Facebook</option>
+                                <option value="youtube">▶️ YouTube</option>
+                                <option value="telegram">✈️ Telegram</option>
+                                <option value="tiktok">🎵 TikTok</option>
+                                <option value="instagram">📷 Instagram</option>
+                                <option value="twitter">🐦 Twitter/X</option>
+                                <option value="general">📢 General</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="social-subtitle">Mata Duree Xiqqaa:</label>
+                        <input type="text" id="social-subtitle" name="subtitle" placeholder="Ibsa gabaabaa...">
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="social-content">Qabiyyee:</label>
+                        <textarea id="social-content" name="content" required placeholder="Post qabiyyee barreessaa..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="social-image">Suuraa upload:</label>
+                            <small style="color:#64748b; font-size:0.8rem;">Images will be resized to YouTube banner size (2560x1440)</small>
+                            <input type="file" id="social-image" name="image" accept="image/*">
+                            <div id="social-image-preview" class="image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="social-video-url">Video URL:</label>
+                            <input type="url" id="social-video-url" name="videoUrl" placeholder="https://youtube.com/watch?v=...">
+                            <small style="color:#64748b; font-size:0.8rem; display:block; margin-top:4px;">YouTube, TikTok ykn video link</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="social-link">Social Media Link URL:</label>
+                        <input type="url" id="social-link" name="link" placeholder="https://facebook.com/... ykn https://t.me/...">
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">📱 Publish Post</button>
+                        <button type="button" id="social-cancel-edit" class="btn btn-secondary" style="display:none;" onclick="adminDashboard.cancelSocialEdit()">✕ Cancel Edit</button>
+                        <button type="button" class="btn btn-warning" onclick="document.getElementById('social-form').reset(); document.getElementById('social-image-preview').innerHTML='';">🔄 Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>📱 Social Media Posts Jiran</h2>
+                <div style="overflow-x:auto;">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Suuraa</th>
+                                <th>Mata Duree</th>
+                                <th>Platform</th>
+                                <th>Guyyaa</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="social-list">
+                            <tr><td colspan="5" style="text-align:center; color:#94a3b8; padding:2rem;">Social media post hin jiru. Post haaraa dabalaa!</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings-tab" class="tab-content">
+            <div class="admin-card">
+                <h2>Website Settings</h2>
+                <form id="settings-form" class="admin-form">
+                    <div class="form-group">
+                        <label for="site-title">Site Title:</label>
+                        <input type="text" id="site-title" name="siteTitle" value="ClickICT">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="site-description">Site Description:</label>
+                        <textarea id="site-description" name="siteDescription">Teeknoloojii Afaan Oromootiin</textarea>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">Save Settings</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h2>Developer Information</h2>
+                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; margin-right: 1rem;">
+                            GM
+                        </div>
+                        <div>
+                            <h3 style="margin: 0; color: #1e293b;">Gurmessa Milki</h3>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Website Developer</p>
+                        </div>
+                    </div>
+                    <div style="color: #374151; line-height: 1.6;">
+                        <p><strong>Role:</strong> Full-Stack Developer</p>
+                        <p><strong>Specialization:</strong> Web Development, UI/UX Design</p>
+                        <p><strong>Contact:</strong> gurmessa89@gmail.com</p>
+                        <p><strong>Project:</strong> ClickICT - Technology Education Platform in Oromo Language</p>
+                        <p style="margin-top: 1rem; font-style: italic; color: #64748b;">
+                            "Dedicated to making technology education accessible in Afaan Oromoo"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook"></a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube"></a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram"></a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">🎵</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">📝</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                         Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Change Password Button (Bottom Left) -->
+    <div style="position: fixed; bottom: 20px; left: 20px; z-index: 1000;">
+        <button id="change-password-btn" class="btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+            <span style="font-size: 1.2rem;">🔐</span>
+            <span>Change Password</span>
+        </button>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="change-password-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 2rem; border-radius: 12px; max-width: 500px; width: 90%; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 style="margin: 0; color: #1e293b;"> Change Password</h2>
+                <button id="close-modal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #64748b;">&times;</button>
+            </div>
+            
+            <form id="change-password-form">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="current-password" style="display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500;">Current Password:</label>
+                    <input type="password" id="current-password" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="new-password" style="display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500;">New Password:</label>
+                    <input type="password" id="new-password" required minlength="6" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                    <small style="color: #64748b; font-size: 0.85rem;">Minimum 6 characters</small>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="confirm-password" style="display: block; margin-bottom: 0.5rem; color: #374151; font-weight: 500;">Confirm New Password:</label>
+                    <input type="password" id="confirm-password" required minlength="6" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                </div>
+                
+                <div id="password-message" style="margin-bottom: 1rem; padding: 10px; border-radius: 6px; display: none;"></div>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <button type="submit" class="btn btn-success" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Update Password</button>
+                    <button type="button" id="cancel-change" class="btn btn-secondary" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; background: #64748b; color: white;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="message-container"></div>
+
+    <script src="../script.js"></script>
+    <script src="../chatbot.js"></script>
+    <script src="../admin-auth.js"></script>
+    <script src="../admin-dashboard.js"></script>
+    <script src="../navigation-manager.js"></script>
+    <script src="../book-seller.js"></script>
+    
+</body>
+</html>

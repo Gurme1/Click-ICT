@@ -1,0 +1,6 @@
+{
+    "html.autoClosingTags": false,
+    "markdown.extension.completion.enabled": false,
+    "markdown.extension.tableFormatter.enabled": false,
+    "kiroAgent.configureMCP": "Disabled"
+}

@@ -1,0 +1,2 @@
+﻿<!DOCTYPE html>
+<html><head><title>Preview</title><link rel='stylesheet' href='styles.css'></head><body><div id='preview-content'></div><script>const data=sessionStorage.getItem('previewPost')||sessionStorage.getItem('previewPage');if(data){const content=JSON.parse(data);document.getElementById('preview-content').innerHTML='<h1>'+content.title+'</h1><p>'+content.content+'</p>';}</script></body></html>

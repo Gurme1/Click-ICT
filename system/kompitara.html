@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompitara - Hardware, Software fi Troubleshooting | ClickICT</title>
+    <meta name="description" content="Kompitara Afaan Oromootiin baradhaa. Hardware, Software install gochuu, Troubleshooting, Network fi Security. Free computer tutorials in Oromo language.">
+    <meta name="keywords" content="kompitara, computer tutorial, hardware, software, troubleshooting, Afaan Oromoo, ClickICT, Ethiopia">
+    <meta name="author" content="Gurmessa Milki">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://clickict.com/system/kompitara.html">
+    <meta property="og:title" content="Kompitara - ClickICT">
+    <meta property="og:description" content="Kompitara Afaan Oromootiin baradhaa. Hardware, Software, Troubleshooting fi Network.">
+    <meta property="og:image" content="https://clickict.com/img/lo.jpg">
+    <meta property="og:url" content="https://clickict.com/system/kompitara.html">
+    <link rel="icon" type="image/jpeg" href="../img/lo.jpg">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html" class="active">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="user-login.html" style="color: #059669;">Login</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om">🇪🇹 Afaan Oromoo</option>
+                            <option value="am">🇪🇹 አማርኛ</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="ar">🇸🇦 العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;"></span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="kompitara.html" class="active">💻 Kompitara</a></li>
+            <li><a href="bilbila.html">📱 Bilbila</a></li>
+            <li><a href="teeknoloojii.html">🌐 Teeknoloojii</a></li>
+            <li><a href="ai.html">🤖 Barnoota AI</a></li>
+            <li><a href="social-media.html">📲 Social Media</a></li>
+            <li><a href="about-developer.html">👨‍💻 About Us</a></li>
+            <li><a href="user-login.html">🔐 Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Kompitara</h1>
+                <p>Hardware, Software fi Troubleshooting Kompitaraa Afaan Oromootiin Baradhaa</p>
+            </div>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="hero" style="margin-top: 2rem; padding: 2rem;">
+            <div class="hero-image">
+                <div class="slideshow-container">
+                    <img src="../img/img1.jpg" alt="Computer Technology" class="slideshow-image active" loading="eager">
+                    <img src="../img/img4.jpg" alt="Learning" class="slideshow-image" loading="lazy">
+                    <img src="../img/img5.jpg" alt="Innovation" class="slideshow-image" loading="lazy">
+                    <img src="../img/img6.jpg" alt="Digital" class="slideshow-image" loading="lazy">
+                    <img src="../img/img7.jpg" alt="Education" class="slideshow-image" loading="lazy">
+                    <img src="../img/img8.jpg" alt="Tech World" class="slideshow-image" loading="lazy">
+                    <img src="../img/img9.jpg" alt="Future" class="slideshow-image" loading="lazy">
+                    <img src="../img/img10.jpg" alt="Development" class="slideshow-image" loading="lazy">
+                    <img src="../img/img11.jpg" alt="Progress" class="slideshow-image" loading="lazy">
+                    
+                    <!-- Title Overlay on Slideshow -->
+                    <div class="hero-content-overlay" style="justify-content: flex-start; padding-top: 30px;">
+                        <h2 style="font-size: 3rem; color: white; text-align: center; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); font-weight: 700; margin: 0;">Qaamolee Koompitaraa</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Note About Kompitara -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem 1rem; margin-bottom: 2rem;">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h2 style="color: #1e293b; margin-bottom: 1rem; text-align: center;">📝 Waa'ee Kompitaraa</h2>
+                    <div style="color: #374151; line-height: 1.8; font-size: 1rem;">
+                        <p style="margin-bottom: 1rem;">
+                            <strong>Kompitara</strong> meeshaa elektirooniksii odeeffannoo qabatee, kuusee fi qindeessee kan kennu dha. 
+                            Bara ammaa kana jireenya keenyaa keessatti gahee guddaa qaba. Hojii, barnoota, qunnamtii fi bashannana keessatti 
+                            kompitara fayyadamna.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Kompitarri qaamolee gurguddoo lama qaba: <strong>Hardware</strong> (Qaama Kompitaraa) fi <strong>Software</strong> 
+                            (Moosaajii Kompitaraa). Hardware qaamolee qabatamoo kan akka keyboard, mouse, monitor fi CPU yoo ta'u, 
+                            Software immoo sagantaalee kompitara hojjechisan kan akka Windows, Microsoft Office fi kanneen biroo dha.
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            Fuula kana irratti waa'ee hardware kompitaraa, software install gochuu, rakkoo kompitaraa furuu (troubleshooting), 
+                            network setup gochuu fi kompitara keessan eeguu (security) barattu. Barnoota kana hunda <strong>Afaan Oromootiin</strong> 
+                            kan dhiyeeffamu yoo ta'u, salphaatti hubachuu dandeessu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>🖥️ Hardware Kompitaraa</h3>
+                        <p>Qaamolee kompitaraa adda addaa fi hojii isaanii hubachuu. Processor, RAM, Hard Drive, Motherboard fi kanneen biroo.</p>
+                        <ul>
+                            <li>CPU (Processor) maal akka ta'e</li>
+                            <li>RAM fi Storage garaagarummaa</li>
+                            <li>Graphics Card fi faayidaa isaa</li>
+                            <li>Power Supply Unit (PSU)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>💿 Software fi Operating System</h3>
+                        <p>Windows, Linux fi macOS fayyadamuu barachuu. Software install gochuu fi manage gochuu.</p>
+                        <ul>
+                            <li>Windows 11 install gochuu</li>
+                            <li>Linux Ubuntu fayyadamuu</li>
+                            <li>Driver software install gochuu</li>
+                            <li>Antivirus fi Security</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔧 Troubleshooting fi Maintenance</h3>
+                        <p>Kompitara rakkoo qabu suphaa gochuu fi maintenance gochuu barbaachisu.</p>
+                        <ul>
+                            <li>Kompitara suphaa hin taane suphaa gochuu</li>
+                            <li>Blue Screen of Death (BSOD) furuu</li>
+                            <li>Virus fi Malware balleessuu</li>
+                            <li>Data backup fi recovery</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🌐 Network fi Internet</h3>
+                        <p>WiFi, Ethernet fi Internet connection setup gochuu fi troubleshoot gochuu.</p>
+                        <ul>
+                            <li>WiFi password haaraa gochuu</li>
+                            <li>Router setup fi configuration</li>
+                            <li>Internet speed test gochuu</li>
+                            <li>Network security fi VPN</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>⚡ Performance Optimization</h3>
+                        <p>Kompitara ariifachaa fi suphaa taasisuuf mala adda addaa.</p>
+                        <ul>
+                            <li>Startup programs manage gochuu</li>
+                            <li>Disk cleanup fi defragmentation</li>
+                            <li>Registry cleaning</li>
+                            <li>Temperature monitoring</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🛡️ Security fi Privacy</h3>
+                        <p>Kompitara keessan eeguu fi data keessan dhoksuu.</p>
+                        <ul>
+                            <li>Strong password banuu</li>
+                            <li>Two-factor authentication</li>
+                            <li>File encryption gochuu</li>
+                            <li>Safe browsing habits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Types of Computer Section -->
+                <section style="margin-top: 3rem; margin-bottom: 3rem;">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">💻 Gosoonni Kompitaraa (Types of Computer)</h2>
+                    
+                    <div style="max-width: 1000px; margin: 0 auto; background: #f8fafc; padding: 2rem; border-radius: 12px; border-left: 4px solid #2563eb;">
+                        <p style="color: #374151; line-height: 1.8; margin-bottom: 2rem; font-size: 1rem;">
+                            Kompitarri gosoota adda addaa qaba. Tokkoon tokkoon isaanii hojii fi faayidaa mataa isaanii qabu. 
+                            Gosoonni kompitaraa ijoo kanneen armaan gadii dha:
+                        </p>
+
+                        <div class="content-grid">
+                            <div class="content-card">
+                                <h3>🖥️ Desktop Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Desktop</strong> kompitara minjaala irratti kaa'amee fayyadamu dha. Qaamolee adda addaa kan akka 
+                                    monitor, keyboard, mouse fi CPU of'irraa qaba. Hojii cimaa fi gaming'f gaarii dha.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Humna guddaa qaba</li>
+                                    <li>Upgrade gochuun salphaa</li>
+                                    <li>Gatii madaalawaa</li>
+                                    <li>Hojii ofisii fi gaming'f gaarii</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>💼 Laptop Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Laptop</strong> kompitara baadhatamaa yoo ta'u, bakka hundatti geessuu dandeessa. 
+                                    Monitor, keyboard fi battery of'irraa qaba. Barattootaa fi hojjettootaaf gaarii dha.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Baadhatamaa fi salphaa</li>
+                                    <li>Battery qabaachuu</li>
+                                    <li>Bakka hundatti fayyadamuu dandeessa</li>
+                                    <li>Barnoota fi hojii deddeebi'aaf gaarii</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>📱 Tablet Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Tablet</strong> kompitara touchscreen qabu yoo ta'u, iPad fi Samsung Tab fakkeenyota isaati. 
+                                    Dubbisuu, video ilaaluu fi interneetii fayyadamuuf gaarii dha.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Touchscreen fayyadama</li>
+                                    <li>Baadhatamaa fi salphaa</li>
+                                    <li>Battery dheeraa</li>
+                                    <li>Media consumption'f gaarii</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>🖥️ All-in-One Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>All-in-One</strong> monitor fi CPU walitti makamee kan jiru dha. Bakka xiqqaa fudhata. 
+                                    iMac fi HP All-in-One fakkeenyota isaati.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Design bareedaa</li>
+                                    <li>Bakka xiqqaa fudhata</li>
+                                    <li>Setup salphaa</li>
+                                    <li>Mana fi ofisii xiqqaaf gaarii</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>🎮 Gaming Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Gaming PC</strong> taphoota taphachuuf kan ijaarame yoo ta'u, graphics card cimaa fi 
+                                    processor humna guddaa qabu qaba. Taphoota cimaa taphachuuf gaarii dha.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Graphics card cimaa</li>
+                                    <li>Processor ariifataa</li>
+                                    <li>RAM guddaa (16GB+)</li>
+                                    <li>RGB lighting fi cooling system</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>🖥️ Server Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Server</strong> kompitara guddaa data kuusee fi kompitaroota biroo tajaajilu dha. 
+                                    Dhaabbilee gurguddoo fi websaayitoonni server fayyadamu.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Humna guddaa qaba</li>
+                                    <li>Data baay'ee kuusa</li>
+                                    <li>24/7 hojjeta</li>
+                                    <li>Dhaabbilee fi websaayitoota tajaajila</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>⌚ Wearable Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Wearable</strong> kompitara uffatamuu danda'u kan akka smartwatch fi fitness tracker dha. 
+                                    Apple Watch fi Fitbit fakkeenyota isaati.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Xiqqaa fi salphaa</li>
+                                    <li>Fayyaa hordofa</li>
+                                    <li>Notification argachuu</li>
+                                    <li>Fitness tracking</li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>🏢 Workstation Computer</h3>
+                                <p style="color: #64748b; line-height: 1.6;">
+                                    <strong>Workstation</strong> hojii professional kan akka video editing, 3D design fi engineering'f 
+                                    kan ijaarame dha. Desktop caalaa humna guddaa qaba.
+                                </p>
+                                <ul style="margin-top: 1rem; color: #374151;">
+                                    <li>Humna guddaa qaba</li>
+                                    <li>Professional software hojjechisa</li>
+                                    <li>Multi-tasking gaarii</li>
+                                    <li>Video editing fi design'f gaarii</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px; border-left: 4px solid #059669;">
+                            <h4 style="color: #1e293b; margin-bottom: 1rem;">💡 Yaada Gaarii:</h4>
+                            <p style="color: #374151; line-height: 1.8; margin: 0;">
+                                Kompitara bitachuu barbaaddan yeroo, hojii keessan irratti hundaa'uun filadhaa. 
+                                Yoo barnoota qofa ta'e <strong>Laptop</strong> gaarii dha. Gaming barbaaddan <strong>Gaming PC</strong> filadhaa. 
+                                Hojii professional ta'e <strong>Workstation</strong> filadhaa. Gatii fi fedhii keessan waliin walsimsiisaa.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detailed Hardware Components Section -->
+                <section style="margin-top: 3rem; margin-bottom: 3rem;">
+                    <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">🔧 Qaamolee Hardware Kompitaraa Bal'inaan</h2>
+                    
+                    <div style="max-width: 1000px; margin: 0 auto;">
+                        <div class="content-card" style="margin-bottom: 2rem;">
+                            <h3>🧠 CPU (Central Processing Unit) - Sammuu Kompitaraa</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                CPU sammuu kompitaraa yoo ta'u, hojii hunda to'ata. Intel fi AMD dhaabbilee CPU oomishantu jiru. 
+                                CPU saffisa GHz (Gigahertz) tiin safarama. Saffisi olaanaa ta'e, kompitarri ariifata.
+                            </p>
+                            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                <h4 style="color: #0369a1; margin-bottom: 1rem;">Gosoonni CPU:</h4>
+                                <ul style="color: #374151; line-height: 1.8;">
+                                    <li><strong>Intel Core i3:</strong> Hojii salphaa fi barnoota</li>
+                                    <li><strong>Intel Core i5:</strong> Hojii giddu galeessaa fi gaming salphaa</li>
+                                    <li><strong>Intel Core i7:</strong> Gaming cimaa fi video editing</li>
+                                    <li><strong>Intel Core i9:</strong> Professional work fi gaming olaanaa</li>
+                                    <li><strong>AMD Ryzen 3/5/7/9:</strong> Intel waliin wal dorgoma</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="margin-bottom: 2rem;">
+                            <h3>💾 RAM (Random Access Memory) - Yaadannoo Yeroo Gabaabaa</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                RAM yaadannoo yeroo gabaabaa yoo ta'u, kompitarri hojii ammaa hojjechaa jiru keessatti data kuusa. 
+                                RAM guddaa ta'e, sagantaalee baay'ee yeroo tokkotti banuun ni danda'ama.
+                            </p>
+                            <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                <h4 style="color: #15803d; margin-bottom: 1rem;">RAM Hammam Barbaachisa?</h4>
+                                <ul style="color: #374151; line-height: 1.8;">
+                                    <li><strong>4GB:</strong> Hojii salphaa qofa (email, browsing)</li>
+                                    <li><strong>8GB:</strong> Hojii giddu galeessaa fi barnoota</li>
+                                    <li><strong>16GB:</strong> Gaming, video editing, multitasking</li>
+                                    <li><strong>32GB+:</strong> Professional work, 3D rendering, programming</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="margin-bottom: 2rem;">
+                            <h3>💿 Storage - Kuusaa Data</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                Storage bakka file, photo, video fi software keessan kuuftan dha. Gosoota lama qaba: HDD fi SSD.
+                            </p>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                                <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px;">
+                                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">💽 HDD (Hard Disk Drive)</h4>
+                                    <ul style="color: #374151; line-height: 1.6; font-size: 0.95rem;">
+                                        <li>Gatii gadi bu'aa</li>
+                                        <li>Kuusaa guddaa (1TB-10TB)</li>
+                                        <li>Suphaa xiqqaa</li>
+                                        <li>Data backup'f gaarii</li>
+                                    </ul>
+                                </div>
+                                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px;">
+                                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">⚡ SSD (Solid State Drive)</h4>
+                                    <ul style="color: #374151; line-height: 1.6; font-size: 0.95rem;">
+                                        <li>Saffisa olaanaa</li>
+                                        <li>Suphaa fi ariifata</li>
+                                        <li>Gatii olaanaa</li>
+                                        <li>OS install'f gaarii</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="margin-bottom: 2rem;">
+                            <h3>🎮 Graphics Card (GPU) - Kaardii Suuraa</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                GPU suuraa fi video monitor irratti agarsiisa. Gaming fi video editing'f baay'ee barbaachisaa dha. 
+                                NVIDIA fi AMD dhaabbilee GPU oomishantu jiru.
+                            </p>
+                            <div style="background: #fce7f3; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                <h4 style="color: #9f1239; margin-bottom: 1rem;">Yeroo GPU Barbaachisu:</h4>
+                                <ul style="color: #374151; line-height: 1.8;">
+                                    <li>Gaming cimaa taphachuu barbaaddan</li>
+                                    <li>Video editing fi 3D rendering</li>
+                                    <li>Graphic design fi animation</li>
+                                    <li>Machine learning fi AI development</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content-card" style="margin-bottom: 2rem;">
+                            <h3>🔌 Power Supply Unit (PSU) - Humna Elektirikaa</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                PSU humna elektirikaa qaamolee kompitaraa hundaaf kenna. Watt (W) tiin safarama. 
+                                Kompitara cimaa ta'e, PSU humna guddaa barbaachisa.
+                            </p>
+                            <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                <p style="color: #374151; line-height: 1.8; margin: 0;">
+                                    <strong>Yaada:</strong> PSU gaarii bitachuu barbaachisaa dha. PSU gadhee ta'e kompitara keessan 
+                                    miidhuu danda'a. 500W-750W kompitara idilee'f gaarii dha. Gaming PC'f 750W-1000W barbaachisa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>🖥️ Motherboard - Gabatee Haadha</h3>
+                            <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                Motherboard qaamolee kompitaraa hunda walitti hidhuu dha. CPU, RAM, GPU fi storage hundi 
+                                motherboard irratti maxxanu. Motherboard gaarii bitachuun barbaachisaa dha.
+                            </p>
+                            <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                <h4 style="color: #991b1b; margin-bottom: 1rem;">Wantoota Motherboard Bitachuu Dura Ilaaluu Qabdan:</h4>
+                                <ul style="color: #374151; line-height: 1.8;">
+                                    <li>CPU socket type (Intel ykn AMD)</li>
+                                    <li>RAM slots baay'ina (2, 4 ykn 8)</li>
+                                    <li>PCIe slots GPU'f</li>
+                                    <li>M.2 slots SSD'f</li>
+                                    <li>USB ports fi connectivity options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software Installation Guide -->
+                <section style="margin-top: 3rem; margin-bottom: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 1rem;">
+                    <div class="container">
+                        <h2 style="text-align: center; color: white; margin-bottom: 2rem;">💿 Barnoota Software Install Gochuu</h2>
+                        
+                        <div style="max-width: 1000px; margin: 0 auto; background: white; padding: 2rem; border-radius: 12px;">
+                            <div class="content-card" style="margin-bottom: 2rem;">
+                                <h3>🪟 Windows 11 Install Gochuu</h3>
+                                <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                    Windows 11 operating system haaraa Microsoft irraa kan ba'e dha. Kompitara haaraa irratti 
+                                    ykn kompitara moofaa irratti install gochuu dandeessu.
+                                </p>
+                                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                    <h4 style="color: #1e293b; margin-bottom: 1rem;">Tarkaanfiiwwan:</h4>
+                                    <ol style="color: #374151; line-height: 1.8; padding-left: 1.5rem;">
+                                        <li>Windows 11 ISO file Microsoft website irraa buufadhaa</li>
+                                        <li>Bootable USB drive uumuuf Rufus software fayyadamaa</li>
+                                        <li>BIOS keessatti boot order jijjiiraa (USB first)</li>
+                                        <li>USB drive takka kompitara keessanitti galchaa fi restart godhaa</li>
+                                        <li>Windows setup screen irratti qajeelfama hordofaa</li>
+                                        <li>Partition uumaa fi Windows install godhaa</li>
+                                        <li>Driver software install godhaa fi update godhaa</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="content-card" style="margin-bottom: 2rem;">
+                                <h3>🐧 Linux Ubuntu Install Gochuu</h3>
+                                <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                    Linux Ubuntu operating system bilisaa fi open-source dha. Programmers fi developers'n baay'ee fayyadamu.
+                                </p>
+                                <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                    <h4 style="color: #92400e; margin-bottom: 1rem;">Faayidaa Ubuntu:</h4>
+                                    <ul style="color: #374151; line-height: 1.8;">
+                                        <li>Bilisaa fi open-source</li>
+                                        <li>Virus fi malware irraa eegamaa</li>
+                                        <li>Suphaa fi ariifata</li>
+                                        <li>Programming fi development'f gaarii</li>
+                                        <li>Community support guddaa qaba</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>🛡️ Antivirus Software Install Gochuu</h3>
+                                <p style="color: #374151; line-height: 1.8; margin-bottom: 1rem;">
+                                    Antivirus software kompitara keessan virus, malware fi cyber attacks irraa eega. 
+                                    Antivirus gaarii install gochuun barbaachisaa dha.
+                                </p>
+                                <div style="background: #dcfce7; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                    <h4 style="color: #15803d; margin-bottom: 1rem;">Antivirus Software Gaarii:</h4>
+                                    <ul style="color: #374151; line-height: 1.8;">
+                                        <li><strong>Windows Defender:</strong> Windows keessatti kan jiru (bilisaa)</li>
+                                        <li><strong>Avast:</strong> Bilisaa fi gaarii</li>
+                                        <li><strong>AVG:</strong> Bilisaa fi salphaa</li>
+                                        <li><strong>Kaspersky:</strong> Cimaa fi professional</li>
+                                        <li><strong>Norton:</strong> Eegumsa guutuu kenna</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="tutorials-section">
+                    <h2>Barnoota Bal'aa</h2>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-image"></div>
+                            <div class="post-content">
+                                <span class="post-category">Hardware</span>
+                                <h3>Akkamitti RAM Kompitara Keessanitti Dabaluu</h3>
+                                <p>RAM dabalachuun kompitara keessan suphaa taasisa. Mala sirrii fi salphaa...</p>
+                                <div class="post-meta">
+                                    <span>15 daqiiqaa</span>
+                                    <span>Beginner</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image"></div>
+                            <div class="post-content">
+                                <span class="post-category">Software</span>
+                                <h3>Windows 11 Haaraa Install Gochuu</h3>
+                                <p>Windows 11 kompitara keessanitti install gochuuf tarkaanfii hunda...</p>
+                                <div class="post-meta">
+                                    <span>25 daqiiqaa</span>
+                                    <span>Intermediate</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image"></div>
+                            <div class="post-content">
+                                <span class="post-category">Troubleshooting</span>
+                                <h3>Kompitaraa Suphaa Hin Taane Furuu</h3>
+                                <p>Kompitara keessan suphaa hin taane yoo ta'e, sababa fi furmaata...</p>
+                                <div class="post-meta">
+                                    <span>20 daqiiqaa</span>
+                                    <span>Beginner</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                        <a href="#" aria-label="Telegram">✈️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-info {
+            padding: 1rem;
+        }
+
+        .gallery-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item-description {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .gallery-item-category {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .gallery-modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .gallery-modal-info {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            max-width: 600px;
+        }
+
+        .gallery-modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            color: #1e293b;
+        }
+
+        .gallery-modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            color: #1e293b;
+            transition: all 0.3s;
+        }
+
+        .gallery-modal-nav:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-modal-prev {
+            left: 20px;
+        }
+
+        .gallery-modal-next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-item img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width: 50px; height: 50px; border-radius: 8px; margin-right: 12px; object-fit: cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="videos.html">📹 Videos</a></li>
+                    <li><a href="gallery.html" class="active">🖼️ Gallery</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="user-login.html" style="color: #059669;">Login</a></li>
+                    <li class="language-selector">
+                        <select id="language-switcher" style="padding: 8px; border: 1px solid #e5e7eb; border-radius: 6px; background: white; color: #374151; font-size: 0.9rem;">
+                            <option value="om">🇪🇹 Afaan Oromoo</option>
+                            <option value="am">🇪🇹 አማርኛ</option>
+                            <option value="en">🇺🇸 English</option>
+                            <option value="ar">🇸🇦 العربية</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Live Clock Bar -->
+        <div id="live-clock-bar" style="background: linear-gradient(135deg, #8b9dea 0%, #9b7bc2 100%); padding: 12px 20px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div id="live-clock" style="font-size: 1.2rem; font-weight: 700; color: white; font-family: 'Courier New', monospace; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">🕐</span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="font-size: 1rem; font-weight: 600; color: #fbbf24;">AM</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="kompitara.html">💻 Kompitara</a></li>
+            <li><a href="bilbila.html">📱 Bilbila</a></li>
+            <li><a href="teeknoloojii.html">🌐 Teeknoloojii</a></li>
+            <li><a href="ai.html">🤖 Barnoota AI</a></li>
+            <li><a href="videos.html">📹 Videos</a></li>
+            <li><a href="gallery.html" class="active">🖼️ Gallery</a></li>
+            <li><a href="social-media.html">📲 Social Media</a></li>
+            <li><a href="about-developer.html">👨‍💻 About Us</a></li>
+            <li><a href="user-login.html">🔐 Login</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>🖼️ Gallery</h1>
+                <p>Suuraa barnoota fi hojii keenya ilaalaa</p>
+            </div>
+        </section>
+
+        <!-- Featured Images Section -->
+        <section id="featured-gallery-section" style="padding: 40px 20px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); display: none;">
+            <div class="container">
+                <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">⭐ Featured Images</h2>
+                <div id="featured-gallery-container" class="gallery-grid">
+                    <!-- Featured images will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section style="padding: 20px; background: white;">
+            <div class="container">
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <button class="category-filter-btn active" data-category="all" style="padding: 10px 20px; border: 2px solid #2563eb; background: #2563eb; color: white; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        All Images
+                    </button>
+                    <button class="category-filter-btn" data-category="kompitara" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        💻 Kompitara
+                    </button>
+                    <button class="category-filter-btn" data-category="bilbila" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        📱 Bilbila
+                    </button>
+                    <button class="category-filter-btn" data-category="teeknoloojii" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        🌐 Teeknoloojii
+                    </button>
+                    <button class="category-filter-btn" data-category="events" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        🎉 Events
+                    </button>
+                    <button class="category-filter-btn" data-category="students" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        👨‍🎓 Students
+                    </button>
+                    <button class="category-filter-btn" data-category="projects" style="padding: 10px 20px; border: 2px solid #2563eb; background: white; color: #2563eb; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                        🚀 Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Images Section -->
+        <section style="padding: 40px 20px; background: #f8fafc;">
+            <div class="container">
+                <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">🖼️ All Images</h2>
+                <div id="gallery-container" class="gallery-grid">
+                    <!-- Gallery images will be loaded here -->
+                </div>
+                
+                <div id="no-gallery-message" style="display: none; text-align: center; padding: 3rem; color: #64748b;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">🖼️ No images available yet</p>
+                    <p>Check back soon for new gallery content!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+            <button class="gallery-modal-nav gallery-modal-prev" onclick="navigateGallery(-1)">‹</button>
+            <button class="gallery-modal-nav gallery-modal-next" onclick="navigateGallery(1)">›</button>
+            <img id="modal-image" class="gallery-modal-image" src="" alt="">
+            <div class="gallery-modal-info">
+                <span id="modal-category" class="gallery-item-category"></span>
+                <h3 id="modal-title" style="margin: 0.5rem 0; color: #1e293b;"></h3>
+                <p id="modal-description" style="color: #64748b; margin-bottom: 0.5rem;"></p>
+                <p id="modal-photographer" style="color: #94a3b8; font-size: 0.85rem; font-style: italic;"></p>
+                <p id="modal-date" style="color: #94a3b8; font-size: 0.85rem;"></p>
+                <a id="modal-url" href="#" target="_blank" style="display: none; color: #2563eb; text-decoration: none; font-weight: 600; margin-top: 0.5rem; display: inline-block;">🔗 View Related Content</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ClickICT</h3>
+                    <p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Nu Hordofaa</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/OroComputerSchool" target="_blank" aria-label="Facebook">📘</a>
+                        <a href="https://youtube.com/@orocomputer?si=HAqrdvlBWf4lxikQ" target="_blank" aria-label="YouTube">📺</a>
+                        <a href="https://t.me/Orocomputer" target="_blank" aria-label="Telegram">✈️</a>
+                        <a href="https://tiktok.com/@orocomputer" target="_blank" aria-label="TikTok">🎵</a>
+                        <a href="https://www.gurmuu.blogspot.com" target="_blank" aria-label="Blog">📝</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div style="margin-bottom: 1rem; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; text-align: center;">
+                    <p style="color: white; margin: 0; font-size: 1rem; font-weight: 300;">
+                        👨‍💻 Developed by <strong style="color: #fbbf24;">Gurmessa Milki</strong> - Computer Technology Educator
+                    </p>
+                </div>
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../language-switcher.js"></script>
+    <script src="../user-auth.js"></script>
+    <script src="../chatbot.js"></script>
+    <script>
+        let currentGalleryIndex = 0;
+        let currentGalleryImages = [];
+
+        // Load gallery images from localStorage
+        function loadGallery() {
+            const images = JSON.parse(localStorage.getItem('clickict_gallery') || '[]');
+            const galleryContainer = document.getElementById('gallery-container');
+            const featuredContainer = document.getElementById('featured-gallery-container');
+            const featuredSection = document.getElementById('featured-gallery-section');
+            const noGalleryMessage = document.getElementById('no-gallery-message');
+            
+            currentGalleryImages = images;
+            
+            // Filter featured images
+            const featuredImages = images.filter(img => img.featured);
+            
+            // Show/hide featured section
+            if (featuredImages.length > 0) {
+                featuredSection.style.display = 'block';
+                displayGalleryImages(featuredImages, featuredContainer);
+            } else {
+                featuredSection.style.display = 'none';
+            }
+            
+            // Display all images
+            if (images.length === 0) {
+                noGalleryMessage.style.display = 'block';
+                galleryContainer.innerHTML = '';
+            } else {
+                noGalleryMessage.style.display = 'none';
+                displayGalleryImages(images, galleryContainer);
+            }
+        }
+
+        function displayGalleryImages(images, container) {
+            container.innerHTML = '';
+            
+            images.forEach((image, index) => {
+                const item = createGalleryItem(image, index);
+                container.appendChild(item);
+            });
+        }
+
+        function createGalleryItem(image, index) {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+            item.dataset.category = image.category;
+            item.onclick = () => openGalleryModal(index);
+            
+            item.innerHTML = `
+                <img src="${image.image}" alt="${image.title}">
+                <div class="gallery-item-info">
+                    <span class="gallery-item-category">${image.category}</span>
+                    <h3 class="gallery-item-title">${image.title}</h3>
+                    <p class="gallery-item-description">${image.description.substring(0, 100)}${image.description.length > 100 ? '...' : ''}</p>
+                    ${image.featured ? '<span style="color: #f59e0b; font-size: 0.85rem;">⭐ Featured</span>' : ''}
+                </div>
+            `;
+            
+            return item;
+        }
+
+        function openGalleryModal(index) {
+            currentGalleryIndex = index;
+            const image = currentGalleryImages[index];
+            
+            document.getElementById('modal-image').src = image.image;
+            document.getElementById('modal-category').textContent = image.category;
+            document.getElementById('modal-title').textContent = image.title;
+            document.getElementById('modal-description').textContent = image.description;
+            document.getElementById('modal-photographer').textContent = image.photographer ? `Photo by: ${image.photographer}` : '';
+            document.getElementById('modal-date').textContent = `Added: ${new Date(image.date).toLocaleDateString()}`;
+            
+            const urlLink = document.getElementById('modal-url');
+            if (image.url) {
+                urlLink.href = image.url;
+                urlLink.style.display = 'inline-block';
+            } else {
+                urlLink.style.display = 'none';
+            }
+            
+            document.getElementById('gallery-modal').style.display = 'flex';
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('gallery-modal').style.display = 'none';
+        }
+
+        function navigateGallery(direction) {
+            currentGalleryIndex += direction;
+            
+            if (currentGalleryIndex < 0) {
+                currentGalleryIndex = currentGalleryImages.length - 1;
+            } else if (currentGalleryIndex >= currentGalleryImages.length) {
+                currentGalleryIndex = 0;
+            }
+            
+            openGalleryModal(currentGalleryIndex);
+        }
+
+        // Close modal on background click
+        document.getElementById('gallery-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'gallery-modal') {
+                closeGalleryModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('gallery-modal');
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') closeGalleryModal();
+                if (e.key === 'ArrowLeft') navigateGallery(-1);
+                if (e.key === 'ArrowRight') navigateGallery(1);
+            }
+        });
+
+        // Category filtering
+        document.querySelectorAll('.category-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.category-filter-btn').forEach(b => {
+                    b.style.background = 'white';
+                    b.style.color = '#2563eb';
+                    b.classList.remove('active');
+                });
+                btn.style.background = '#2563eb';
+                btn.style.color = 'white';
+                btn.classList.add('active');
+                
+                // Filter images
+                const category = btn.dataset.category;
+                const galleryItems = document.querySelectorAll('#gallery-container .gallery-item');
+                
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Update navigation based on user login status
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+            const userNavItem = document.getElementById('user-nav-item');
+            
+            if (currentUser) {
+                userNavItem.innerHTML = `
+                    <span style="color: #059669;">Baga nagaan dhufte, ${currentUser.fullname}!</span>
+                    <button id="user-logout-btn" style="background: #dc2626; color: white; border: none; padding: 4px 8px; border-radius: 4px; margin-left: 8px; cursor: pointer;">Logout</button>
+                `;
+                
+                document.getElementById('user-logout-btn').addEventListener('click', () => {
+                    if (window.userAuth) {
+                        window.userAuth.logout();
+                    }
+                });
+            }
+
+            // Load gallery
+            loadGallery();
+        });
+    </script>
+</body>
+</html>

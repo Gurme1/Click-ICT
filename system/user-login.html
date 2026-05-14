@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - ClickICT</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>ClickICT User Login</h1>
+                <p>Miseensa Seensa</p>
+            </div>
+            
+            <form id="user-login-form" class="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username ykn Email:</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary login-btn">Seeni</button>
+                
+                <div id="login-error" class="error-message" style="display: none;">
+                    Username ykn email sirrii miti!
+                </div>
+            </form>
+            
+            <div class="login-footer">
+                <a href="user-register.html">Miseensa miti? Galmaa'i</a> | 
+                <a href="../index.html">← Gara Marsariitii Deebi'i</a>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; text-align: center; font-size: 0.8rem; color: #94a3b8;">
+                    Developed by <strong style="color: #2563eb;">Gurmessa Milki</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../user-auth.js"></script>
+</body>
+</html>

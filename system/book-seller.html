@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Seller - ClickICT | Kitaabota Bitaa</title>
+    <meta name="description" content="ClickICT Book Seller - Kitaabota teeknoloojii, barnoota fi kanneen biroo bitaa. Buy books in ETB and USD.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="../img/lo.jpg">
+    <meta name="theme-color" content="#2563eb">
+    <style>
+        /* ── Book Store Styles ── */
+        .store-hero {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e3a5f 100%);
+            padding: 60px 24px 48px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .store-hero::before {
+            content: '📚';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.04;
+            top: -40px;
+            right: -40px;
+            line-height: 1;
+        }
+        .store-hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        .store-hero p  { font-size: 1.05rem; opacity: 0.85; max-width: 500px; margin: 0 auto; }
+
+        .store-filters {
+            background: white;
+            padding: 16px 24px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            position: sticky;
+            top: 114px;
+            z-index: 90;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .filter-btn {
+            padding: 7px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            background: white;
+            color: #475569;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+        .search-box {
+            margin-left: auto;
+            padding: 8px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            width: 220px;
+            transition: border-color 0.2s;
+        }
+        .search-box:focus { border-color: #2563eb; }
+
+        .books-section { padding: 48px 24px; background: #f8fafc; min-height: 60vh; }
+        .books-section .container { max-width: 1200px; margin: 0 auto; }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.75rem;
+        }
+
+        /* ── Book Card ── */
+        .book-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            border: 1.5px solid #e2e8f0;
+            transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+            display: flex;
+            flex-direction: column;
+        }
+        .book-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-color: transparent;
+        }
+        .book-cover-wrap {
+            position: relative;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+        .book-cover-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .book-cover-placeholder {
+            width: 100%; height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .book-stock-badge {
+            position: absolute;
+            top: 10px; left: 10px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+        .in-stock  { background: #dcfce7; color: #166534; }
+        .out-stock { background: #fee2e2; color: #dc2626; }
+
+        .book-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+        .book-category-tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            width: fit-content;
+        }
+        .book-title  { font-size: 1rem; font-weight: 700; color: #0f172a; line-height: 1.35; margin: 0; }
+        .book-author { font-size: 0.82rem; color: #64748b; margin: 0; }
+        .book-desc   { font-size: 0.85rem; color: #64748b; line-height: 1.5; margin: 0; flex: 1; }
+
+        .book-prices {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .price-etb {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #059669;
+        }
+        .price-usd {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #2563eb;
+            background: #dbeafe;
+            padding: 2px 8px;
+            border-radius: 8px;
+        }
+        .book-actions { display: flex; gap: 8px; margin-top: 4px; }
+        .btn-book-pdf {
+            flex: 1;
+            padding: 8px 10px;
+            background: #f1f5f9;
+            color: #374151;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .btn-book-pdf:hover { background: #e2e8f0; }
+        .btn-book-buy {
+            flex: 1;
+            padding: 8px 10px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        .btn-book-buy:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* ── Stats bar ── */
+        .store-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            padding: 20px 24px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+        }
+        .stat-item { text-align: center; }
+        .stat-num  { font-size: 1.6rem; font-weight: 800; color: #2563eb; }
+        .stat-lbl  { font-size: 0.78rem; color: #64748b; font-weight: 500; }
+
+        @media (max-width: 768px) {
+            .store-hero h1 { font-size: 1.8rem; }
+            .books-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+            .search-box { width: 100%; margin-left: 0; }
+            .store-filters { top: 114px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../img/lo.jpg" alt="ClickICT Logo" style="width:44px; height:44px; border-radius:8px; margin-right:12px; object-fit:cover;">
+                    <h1>ClickICT</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="kompitara.html">Kompitara</a></li>
+                    <li><a href="bilbila.html">Bilbila</a></li>
+                    <li><a href="teeknoloojii.html">Teeknoloojii</a></li>
+                    <li><a href="ai.html">Barnoota AI</a></li>
+                    <li><a href="book-seller.html" class="active" style="color:#f59e0b; font-weight:700;">📚 Book Seller</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="about-developer.html">About Us</a></li>
+                    <li id="user-nav-item"><a href="user-login.html" style="color:#059669;">Login</a></li>
+                </ul>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+        <div id="live-clock-bar" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); padding:10px 20px; display:flex; justify-content:center; align-items:center; position:fixed; top:70px; left:0; right:0; z-index:999;">
+            <div id="live-clock" style="font-size:1.1rem; font-weight:700; color:white; font-family:'Courier New',monospace; display:flex; align-items:center; gap:8px;">
+                <span>🕐</span>
+                <span id="clock-time">00:00:00</span>
+                <span id="clock-period" style="color:#fbbf24; font-size:0.9rem;">AM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="../index.html">🏠 Home</a></li>
+            <li><a href="kompitara.html">💻 Kompitara</a></li>
+            <li><a href="bilbila.html">📱 Bilbila</a></li>
+            <li><a href="teeknoloojii.html">🌐 Teeknoloojii</a></li>
+            <li><a href="ai.html">🤖 Barnoota AI</a></li>
+            <li><a href="book-seller.html" class="active">📚 Book Seller</a></li>
+            <li><a href="social-media.html">📲 Social Media</a></li>
+            <li><a href="about-developer.html">👨‍💻 About Us</a></li>
+            <li><a href="user-login.html">🔐 Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <div class="store-hero" style="margin-top:114px;">
+            <h1>📚 Book Seller</h1>
+            <p>Kitaabota teeknoloojii, barnoota fi kanneen biroo bitaa. ETB fi USD gatii qaba.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="store-stats" id="store-stats">
+            <div class="stat-item"><div class="stat-num" id="stat-total">0</div><div class="stat-lbl">Total Books</div></div>
+            <div class="stat-item"><div class="stat-num" id="stat-available">0</div><div class="stat-lbl">Available</div></div>
+            <div class="stat-item"><div class="stat-num" id="stat-categories">0</div><div class="stat-lbl">Categories</div></div>
+        </div>
+
+        <!-- Filters -->
+        <div class="store-filters">
+            <button class="filter-btn active" data-cat="all" onclick="filterBooks('all', this)">All Books</button>
+            <button class="filter-btn" data-cat="technology" onclick="filterBooks('technology', this)">💻 Technology</button>
+            <button class="filter-btn" data-cat="education" onclick="filterBooks('education', this)">🎓 Education</button>
+            <button class="filter-btn" data-cat="business" onclick="filterBooks('business', this)">💼 Business</button>
+            <button class="filter-btn" data-cat="religion" onclick="filterBooks('religion', this)">📖 Religion</button>
+            <button class="filter-btn" data-cat="fiction" onclick="filterBooks('fiction', this)">📕 Fiction</button>
+            <button class="filter-btn" data-cat="other" onclick="filterBooks('other', this)">📦 Other</button>
+            <input type="text" class="search-box" id="book-search" placeholder="🔍 Search books..." oninput="searchBooks(this.value)">
+        </div>
+
+        <!-- Books Grid -->
+        <section class="books-section">
+            <div class="container">
+                <div class="books-grid" id="books-store-grid">
+                    <!-- Loaded by book-seller.js -->
+                    <div style="grid-column:1/-1; text-align:center; padding:4rem; color:#94a3b8;">
+                        <div style="font-size:3rem; margin-bottom:1rem;">📚</div>
+                        <p>Loading books...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section"><h3>ClickICT</h3><p>Teeknoloojii afaan Oromootiin barachuu fi hubachuu dandeessu marsariitii.</p></div>
+                <div class="footer-section">
+                    <h4>Barnoota</h4>
+                    <ul>
+                        <li><a href="kompitara.html">Kompitara</a></li>
+                        <li><a href="bilbila.html">Bilbila</a></li>
+                        <li><a href="book-seller.html">📚 Book Seller</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Waa'ee Keenya</h4>
+                    <ul>
+                        <li><a href="ai.html">Barnoota AI</a></li>
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="about-developer.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClickICT. Mirgi isaa Seeraa eegamaa dha.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+    <script src="../chatbot.js" defer></script>
+    <script src="../book-seller.js" defer></script>
+    <script>
+        // User nav
+        document.addEventListener('DOMContentLoaded', () => {
+            const u = JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+            const nav = document.getElementById('user-nav-item');
+            if (u && nav) {
+                nav.innerHTML = `<a href="user-dashboard.html" style="color:#059669; font-weight:600;">👤 ${u.fullname}</a>`;
+            }
+
+            // Stats
+            const books = JSON.parse(localStorage.getItem('clickict_books') || '[]');
+            const pub   = books.filter(b => b.status === 'published');
+            document.getElementById('stat-total').textContent     = pub.length;
+            document.getElementById('stat-available').textContent = pub.filter(b => b.stock === 'available').length;
+            document.getElementById('stat-categories').textContent = [...new Set(pub.map(b => b.category))].length;
+        });
+
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        function filterBooks(cat, btn) {
+            currentFilter = cat;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilters();
+        }
+
+        function searchBooks(val) {
+            currentSearch = val.toLowerCase();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const books = JSON.parse(localStorage.getItem('clickict_books') || '[]');
+            let filtered = books.filter(b => b.status === 'published');
+            if (currentFilter !== 'all') filtered = filtered.filter(b => b.category === currentFilter);
+            if (currentSearch) filtered = filtered.filter(b =>
+                b.title.toLowerCase().includes(currentSearch) ||
+                (b.author || '').toLowerCase().includes(currentSearch) ||
+                b.description.toLowerCase().includes(currentSearch)
+            );
+
+            // Re-render with filtered set
+            if (window.bookSeller) {
+                window.bookSeller.books = books; // keep full list
+                const grid = document.getElementById('books-store-grid');
+                grid.innerHTML = '';
+                if (filtered.length === 0) {
+                    grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:4rem; color:#94a3b8;">
+                        <div style="font-size:3rem; margin-bottom:1rem;">🔍</div>
+                        <p>Kitaabni argamne hin jiru.</p></div>`;
+                    return;
+                }
+                const tempBooks = window.bookSeller.books;
+                window.bookSeller.books = filtered;
+                window.bookSeller.renderBooks();
+                window.bookSeller.books = tempBooks;
+            }
+        }
+    </script>
+</body>
+</html>
